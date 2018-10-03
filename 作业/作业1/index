@@ -1,0 +1,5886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝网 - 淘！我喜欢</title>
+	<meta name="description" content="淘宝网 - 亚洲较大的网上交易平台，提供各类服饰、美容、家居、数码、话费/点卡充值… 数亿优质商品，同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，让你安心享受网上购物乐趣！">
+	<meta name="keyword" content="淘宝,掏宝,网上购物,C2C,在线交易,交易市场,网上交易,交易市场,网上买,网上卖,购物网站,团购,网上贸易,安全购物,电子商务,放心买,供应,买卖信息,网店,一口价,拍卖,网上开店,网络购物,打折,免费开店,网购,频道,店铺">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+	<style>
+	/* 初始化 */
+
+    ul,li {
+    	list-style: none;
+    }
+
+    body {
+
+    	color: #3c3c3c;
+    	font-size: 12px;
+    	background-color: #f4f4f4;
+    }
+
+    a {
+    	color: #3c3c3c;
+    	text-decoration: none;
+    }
+
+    a:hover {
+    	color: #F40 !important;
+    }
+
+    /*清除元素的内外边距*/
+    blockquote,
+    body,
+    button,
+    dd,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    input,
+    legend,
+    li,
+    ol,
+    p,
+    pre,
+    td,
+    textarea,
+    th,
+    ul {
+    	margin:0;
+    	padding:0;
+    }
+
+    i {
+    	font-style: normal;
+    }
+
+    input,
+    button {
+    	outline: none;
+    }
+
+    /*引入图标字体*/
+    @font-face {
+      font-family: 'icomoon'; /*引入图标字体时的名字*/
+      src:  url('../fonts/icomoon.eot?suwble');
+      src:  url('../fonts/icomoon.eot?suwble#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?suwble') format('truetype'),
+        url('../fonts/icomoon.woff?suwble') format('woff'),
+        url('../fonts/icomoon.svg?suwble#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .w {
+    	-moz-width: 1190px; /* Firefox 和其他使用 Mozilla 浏览器引擎的浏览器 */
+    -webkit-width: 1190px; /* Safari，Chrome 和其他使用了 Webkit 引擎的浏览器 */
+    -o-width: 1190px; /* Opera */
+    -ms-width: 1190px; /* IE 浏览器（但不总是 IE） */
+    	/*width: 1300px;*/
+    	width: 1190px;
+    }
+
+
+    /*头部*/
+    header {
+    	position: relative;
+    	z-index: 1;
+    	height: 35px;
+    	width: 100%;
+    	background-color: #f5f5f5;
+    	border-bottom: 1px solid #e0d2c5;
+    }
+
+    header .top {
+    	height: 100%;
+    	line-height: 35px;
+    	margin: 0 auto;
+    }
+
+    .top .left {
+    	padding: 0;
+    }
+
+    .top .left li {
+    	float: left;
+    	width: 80px;
+    	padding: 0;
+    }
+
+    .top .china {
+    	width: 84px;
+    }
+
+    .top .china  .jt {
+    	font-family: "icomoon";
+    	color: #9c9c9c;
+    	font-weight: bold;
+    }
+
+    .top .login {
+    	text-align: center;
+    }
+
+    .top .login a {
+    	color: #f22e00;
+
+    }
+
+    .right {
+    	float: right;
+    }
+
+    .right li {
+    	float: left;
+    	width: 85px;
+    	padding-left: 5px;
+    	box-sizing: border-box;
+    	text-align: center;
+    }
+
+    .right .space {
+    	padding: 0;
+    	display: inline-block;
+    	width: 1px;
+    	height: 15px;
+    	margin-top: 10px;
+    	background-color: #ddd;
+    }
+
+    .right li i {
+    	font-family: "icomoon";
+    	color: #ff4400;
+    }
+
+    .right li .jt {
+    	color: #9c9c9c;
+    	font-weight: bold;
+    }
+
+    .right li a .fav {
+    	color: #9c9c9c;
+    }
+
+    .right li .fav:hover {
+    	color: #F40;
+    }
+
+
+
+
+    .side-banner {
+    	position: relative;
+    	/*z-index: -1;*/
+    	width: 55px;
+    	height: 420px;
+    	background-color: #fff;
+    	position: fixed;
+    	top: 55px;
+    	right: 10px;
+    	border-radius: 10px;
+    }
+
+    .side-banner span {
+    	position: absolute;
+    	display: inline-block;
+    	width: 50px;
+    	height: 21px;
+    	overflow: hidden;
+    	margin: -23px 0 0 10px;
+    	font-size: 32px;
+    	color: #ff7f13;
+    	font-weight: bold;
+    }
+
+    .side-banner li {
+    	display: block;
+    	width: 55px;
+    	height: 53px;
+        padding: 12px;
+        /*padding-right: 12px;
+        padding-left: 12px;*/
+
+    	box-sizing: border-box;
+    }
+
+    .side-banner li a {
+    	display: inline-block;
+    	width: 31px;
+    	height: 41px;
+    	margin: 0 auto;
+    	border-bottom: 1px solid #ccc;
+    	font-size: 14px;
+    	text-align: center;
+    	/*line-height: 53px;*/
+    }
+
+    .side-banner li:hover {
+    	background-image: linear-gradient(135deg,#ff971b,#ff5000);
+    }
+
+    .side-banner li:hover a {
+    	color: #fff !important;
+    	font-weight: bold;
+    	border-bottom: none;
+
+    }
+
+    .side-banner li:nth-of-type(1) {
+    	border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    	background-image: linear-gradient(135deg,#ff971b,#ff5000);
+    }
+
+    .side-banner li:nth-of-type(1) a {
+    	color: #fff;
+    	font-weight: bold;
+    	border-bottom: none;
+    }
+
+    .side-banner li:nth-of-type(2) a {
+    	color: #f05;
+    }
+
+    .side-banner li:nth-of-type(3) a {
+    	color: #8d7afb;
+    }
+
+    .side-banner li:nth-of-type(4) a {
+    	color: #A8C001;
+    }
+
+    .side-banner li i {
+    	font-family: "icomoon";
+
+    }
+
+    .side-banner li:nth-of-type(8) a {
+    	border-bottom: none;
+    }
+
+    .side-banner li:nth-of-type(8) {
+    	border-bottom-right-radius: 10px;
+    	border-bottom-left-radius: 10px;
+    }
+
+
+
+
+
+    .shortcut-nav {
+    	position: relative;
+    	width: 100%;
+    	background-color: #fff;
+    	z-index: 1;
+    }
+
+    .shortcut {
+    	height: 135px;
+    	margin: 0 auto;
+    	position: relative;
+    }
+
+    .shortcut .logo {
+    	position: absolute;
+    	padding-top: 40px;
+        width: 142px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .shortcut .search {
+    	position: absolute;
+    	width: 700px;
+    	height: 105px;
+    	top: 50%;
+    	left: 240px;
+    	margin-top: -40px;
+    }
+
+    .shortcut .search-top {
+    	margin-left: 17px;
+    }
+
+    .shortcut .search-top li {
+    	width: 40px;
+    	height: 25px;
+    	float: left;
+    	line-height: 25px;
+    	text-align: center;
+    	margin-right: 3px;
+    }
+
+    .search-top li a {
+    	display: inline-block;
+    	width: 40px;
+    	height: 25px;
+    	color: #F40;
+    }
+
+    .search-top .one a {
+    	font-weight: bold;
+    	color: #fff !important;
+    	background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    	border-radius: 6px 6px 0 0;
+    }
+
+    .search-top .two a:hover,
+    .search-top .three a:hover {
+    	background-color: #FFEEE5;
+        color: #FF5400;
+    }
+
+    .shortcut .search-center {
+    	width: 700px;
+    	height: 42px;
+    	margin-top: 25px;
+    }
+
+    .search-center i {
+    	font-family: "icomoon";
+    	font-size: 20px;
+    	color: #ccc;
+    	position: absolute;
+    }
+
+    .search-center .camera {
+    	margin: 7px -43px;
+    }
+
+    .search-center .camera:hover {
+    	cursor: pointer;
+    }
+
+    .search-center input {
+    	font-family: "icomoon";
+    	width: 610px;
+    	height: 42px;
+    	border: 2px solid #F40;
+    	border-right: 0;
+    	padding-left: 10px;
+    	box-sizing: border-box;
+    	border-bottom-left-radius: 30px;
+    	border-top-left-radius: 30px;
+    }
+
+    .search-center .ss button {
+    	background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    	width: 78px;
+    	height: 42px;
+    	border: none;
+    	float: right;
+    	margin-top: -42px;
+    	margin-right: 11px;
+    	font-size: 18px;
+        font-weight: 700;
+        color: #FFF;
+        border-bottom-right-radius: 30px;
+    	border-top-right-radius: 30px;
+    	cursor: pointer;
+    }
+
+    .search-bottom {
+    	height: 28px;
+    	line-height: 28px;
+    }
+
+    .search-bottom li {
+    	float: left;
+    	margin-right: 12px;
+
+    }
+
+    .search-bottom li a {
+    	color: #666;
+    	font-family: "icomoon";
+    }
+
+    .search-bottom li .one,
+    .search-bottom li .two,
+    .search-bottom li .three {
+    	color: #ff5000;
+    }
+
+    .shortcut .ewm {
+    	width: 105px;
+    	height: 100px;
+    	position: absolute;
+    	top: 25px;
+    	right: 110px;
+    	cursor: pointer;
+    }
+
+    .ewm .x {
+    	display: inline-block;
+    	width: 18px;
+    	height: 18px;
+    	border: 1px solid #eee;
+    	margin-right: 1px;
+    }
+
+    .ewm .x i {
+    	color: #eee;
+    	font-family: "icomoon";
+    	font-size: 20px;
+    	line-height: 18px;
+    	text-align: center;
+    }
+
+    .ewm .ew {
+    	float: right;
+    	width: 82px;
+    	height: 98px;
+    	border: 1px solid #eee;
+    	margin-right: 0;
+    }
+
+    .ewm .ew .moblietb {
+    	display: inline-block;
+    	color: #ff5000;
+    	height: 22px;
+    	width: 82px;
+    	line-height: 22px;
+    	text-align: center;
+    }
+
+    .ewm .imgs {
+    	display: inline-block;
+    	background-size: 70px 70px;
+    	width: 70px;
+    	height: 70px;
+    	background-image: url(../images/download.png);
+    	margin: 0 6px 9px;
+    }
+
+
+
+
+    .nav
+    {
+    	position: relative;
+    	z-index: 2;
+    }
+
+    .nav .nav-top {
+    	position: relative;
+    	width: 100%;
+    	height: 30px;
+    	background-image: linear-gradient(to right,#ff9000 0,#ff5000 100%);
+    }
+
+    .nav-top .nav-muen {
+    	margin: 0 auto;
+    }
+
+    .nav-top .nav-top-left {
+    	width: 190px;
+    	height: 30px;
+    	background-color: #ff5000;
+    	line-height: 30px;
+    	text-align: center;
+    	color: #fff;
+    	font-size: 16px;
+    }
+
+    .nav-top .nav-top-right {
+    	position: absolute;
+    	height: 30px;
+    	width: 850px;
+    	top: 0;
+    	left: 278px;
+    	line-height: 30px;
+
+    }
+
+    .nav-top-right li {
+    	float: left;
+    	font-size: 14px;
+    	font-weight: bold;
+    }
+
+    .nav-top-right li:nth-of-type(1),
+    .nav-top-right li:nth-of-type(2),
+    .nav-top-right li:nth-of-type(3) {
+    	font-size: 16px;
+    }
+
+    .nav-top-right li a {
+    	position: relative;
+    	color: #fff;
+    	padding: 0 10px;
+    }
+
+    .nav-top-right li a:hover {
+    	color: #fff !important;
+    }
+
+    .nav-top-right .space {
+    	width: 2px;
+    	height: 14px;
+    	margin: 8px 10px 0;
+    	background-color: #fff;
+    }
+
+    .nav-top-right i {
+    	font-family: "icomoon";
+    	color: #ff5000;
+    	position: absolute;
+    	font-size: 24px;
+    	height: 18px;
+    	overflow: hidden;
+    	top: -22px;
+        left: 24px;
+        display: none;
+    }
+
+    .nav-top-right li:nth-of-type(1) i {
+    	top: -22px;
+        left: 15px;
+    }
+
+    .nav-top-right li:nth-of-type(3) i {
+    	top: -22px;
+        left: 28px;
+    }
+
+    .nav-top-right li:nth-of-type(5) i,
+    .nav-top-right li:nth-of-type(6) i  {
+    	top: -22px;
+        left: 19px;
+    }
+
+    .nav-top-right li a:hover i {
+    	display: block;
+    }
+
+
+
+
+    .middle {
+    	margin: 0 auto;
+    	position: relative;
+    }
+
+
+    .middle .middle-side-nav {
+    	width: 188px;
+    	height: 520px;
+    	border: 1px solid #ff5000;
+    	border-top: none;
+    	background-color: #fff;
+    }
+
+    .middle-side-nav .none {
+    	width: 100%;
+    	height: 4px;
+    }
+
+    .middle-side-nav ul {
+    	padding-left: 25px;
+    	height: 32px;
+    	line-height: 32px;
+    	box-sizing: border-box;
+    	position: relative;
+    }
+
+    .middle-side-nav ul:hover {
+    	background-color: #ffe4dd;
+    	color: #ff5000 !important;
+
+    }
+
+    .middle-side-nav .ctrl {
+    	font-family: "icomoon";
+    	right: 13px;
+    	position: absolute;
+    }
+
+    .middle-side-nav li {
+    	float: left;
+    	font-size: 14px;
+    	color: #666;
+    }
+
+    .middle-side-nav li a {
+    	color: #666;
+    }
+
+    .middle-side-nav li a:hover {
+    	text-decoration: underline;
+    }
+
+    .middle-side-nav ul:hover a,
+    .middle-side-nav ul:hover li {
+    	color: #f40;
+    }
+
+
+
+    .middle .middle-center {
+    	position: absolute;
+    	width: 690px;
+    	height: 100px;
+    	top: 12px;
+    	left: 200px;
+    }
+
+    .middle-center .middle-center-top {
+    	height: 280px;
+    	width: 100%;
+    }
+
+    .middle-center-middle-left {
+    	width: 520px;
+    }
+
+    .middle-center-top .imgs {
+    	background-image: url(../images/back.jpg);
+    	width: 520px;
+    	height: 280px;
+    	position: relative;
+    }
+
+    .middle-center-top .imgs .ctrl-jt {
+    	position: absolute;
+    	display: inline-block;
+    	width: 20px;
+    	height: 30px;
+    	background-color: rgba(0,0,0,.2);
+    	cursor: pointer;
+    	outline: none;
+    	border: 0;
+    	line-height: 30px;
+    	text-align: center;
+    }
+
+    .middle-center-top .imgs .ctrl-jt:nth-of-type(1) {
+    	top: 50%;
+    	transform: translateY(-50%);
+    	border-bottom-right-radius: 15px;
+    	border-top-right-radius: 15px;
+    }
+
+    .middle-center-top .imgs .ctrl-jt:nth-of-type(2) {
+    	right: 0;
+    	top: 50%;
+    	transform: translateY(-50%);
+    	border-bottom-left-radius: 15px;
+    	border-top-left-radius: 15px;
+    }
+
+    .imgs .ctrl-jt i {
+    	color: #fff;
+    	font-family: "icomoon";
+    	font-size: 18px;
+    }
+
+    .middle-center-top .imgs .ctrl-jt:hover {
+    	background-color: rgba(0,0,0,.4);
+    }
+
+    .middle-center-top .imgs ul {
+    	position: absolute;
+    	width: 90px;
+    	height: 20px;
+    	background-color: rgba(255,255,255,.3);
+    	bottom: 13px;
+    	left: 220px;
+    	border-radius: 10px;
+    }
+
+    .imgs ul li {
+    	float: left;
+    	width: 10px;
+    	height: 10px;
+    	background-color: #fff;
+    	border-radius: 50%;
+    	margin: 5px 4px;
+    	cursor: pointer;
+    }
+
+    .imgs ul li:nth-of-type(2) {
+    	background-color: #ff5000;
+    }
+
+    .middle-center-top .side {
+    	background-image: url(../images/side.webp);
+    	width: 160px;
+    	height: 280px;
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    }
+
+    .middle-center .middle-center-middle {
+    	width: 690px;
+    	height: 217px;
+    	margin-top: 12px;
+    	position: relative;
+    }
+
+    .middle-center-middle .top {
+    	position: relative;
+    	height: 20px;
+    	width: 520px;
+    	border-bottom: 3px solid #ff1648;
+    }
+
+    .middle-center-middle .top img {
+    	position: absolute;
+    	left: 3px;
+    }
+
+    .middle-center-middle .top span {
+    	position: absolute;
+    	color: #666;
+    	left: 137px;
+    	bottom: 1px;
+    }
+
+    .middle-center-middle .top .space {
+    	position: absolute;
+    	bottom: -3px;
+    	left: 0px;
+    	width: 88px;
+    	height: 3px;
+    	background-color: #000;
+    }
+
+    .middle-center-middle .top .six {
+    	position: absolute;
+    	left: 500px;
+    	color: #3C3C3C;
+    }
+
+
+    .top .six i {
+    	color: #ff1648;
+    }
+
+    .middle-center-middle .bottom {
+    	width: 100%;
+    	height: 194px;
+    	background-color: #fff;
+    	padding-top: 18px;
+    	box-sizing: border-box;
+    	position: relative;
+    }
+
+    .middle-center-middle .bottom .imgs {
+    	width: 510px;
+    	height: 160px;
+    	margin: 0px auto;
+    }
+
+    .bottom button .ctrl-jt {
+    	position: absolute;
+    	display: inline-block;
+    	width: 20px;
+    	height: 30px;
+    	background-color: rgba(0,0,0,.3);
+    	cursor: pointer;
+    	outline: none;
+    	border: 0;
+    	line-height: 30px;
+    	text-align: center;
+    }
+
+    .bottom .ctrl-jt:hover {
+    	background-color: rgba(0,0,0,.4);
+    }
+
+    .bottom button {
+        position: absolute;
+        display: inline-block;
+        width: 20px;
+        height: 30px;
+        background-color: rgba(0,0,0,.2);
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        line-height: 30px;
+        text-align: center;
+
+    }
+
+    .bottom button:nth-of-type(1) {
+    	border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
+    	top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .bottom button:nth-of-type(2) {
+    	border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+    	right: 0;
+    	top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .bottom button i {
+    	color: #fff;
+        font-family: "icomoon";
+        font-size: 18px;
+    }
+
+    .bottom .imgs .one-imgs,
+    .bottom .imgs .two-imgs {
+    	width: 251px;
+    	height: 160px;
+    }
+
+    .bottom .imgs .one-imgs {
+    	float: left;
+    	background-image: url(../images/inner1.jpg);
+    }
+
+    .bottom .imgs .two-imgs {
+    	float: right;
+    	background-image: url(../images/inner2.jpg);
+    }
+
+
+    .middle-center-middle .middle-center-middle-right {
+    	width: 160px;
+    	height: 100%;
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    }
+
+    .middle-center-middle-right .hot {
+    	height: 22px;
+    	width: 100%;
+    	line-height: 22px;
+    	color: #a1a1a1;
+    }
+
+    .middle-center-middle-right .bottom-imgs {
+    	width: 100%;
+    	height: 195px;
+    	background-image: url(../images/side_img.jpg);
+    }
+
+    .middle-center .middle-center-bottom {
+    	width: 890px;
+    	height: 106px;
+    	background-color: #fff;
+    	margin: 12px 0 0 -200px;
+    	position: relative;
+    }
+
+    .middle-center-bottom-left {
+    	width: 140px;
+    	height: 60px;
+    	position: absolute;
+    	left: 22px;
+    	top: 33px;
+    }
+
+    .middle-center-bottom-left span {
+    	line-height: 24px;
+        color: #999
+    }
+
+    .middle-center-bottom .middle-center-bottom-right {
+    	width: 680px;
+    	height: 64px;
+    	position: absolute;
+    	right: 20px;
+    	top: 21px;
+    }
+
+    .middle-center-bottom-right a h4 {
+    	margin: -62px 0 0 130px;
+    	font-size: 16px;
+        font-weight: 500;
+        color: #333;
+    }
+
+    .middle-center-bottom-right a h4:hover {
+    	color: #ff5000;
+    }
+
+    .middle-center-bottom-right a p {
+    	margin: 5px 0 0 130px;
+        color: #999;
+        overflow: hidden;
+        font-size: 14px;
+    }
+
+    .middle-center-bottom-right .more {
+    	position: absolute;
+    	top: 6px;
+    	right: 23px;
+    }
+
+    .middle-center-bottom-right .more:hover {
+    	color: #ff5000;
+    }
+
+    .middle-center-bottom-right .more i {
+    	font-family: "icomoon";
+    }
+
+
+
+
+
+    .middle .middle-right {
+    	position: absolute;
+    	width: 290px;
+    	top: 12px;
+    	right: 0;
+    }
+
+    .middle-right .login {
+    	position: relative;
+    	width: 100%;
+    	height: 145px;
+    }
+
+    .login .imgs {
+    	width: 100%;
+    	height: 145px;
+    	background-size: 290px 145px;
+    	background-image: url(../images/background.png);
+    	position: relative;
+    }
+
+    .login .imgs .circle {
+    	position: absolute;;
+    	top: 6px;
+    	left: 50%;
+    	margin-left: -26px;
+    	display: inline-block;
+    	width: 52px;
+    	height: 52px;
+    	border-radius: 50%;
+    	background-image: url(../images/logo_tx.jpg);
+    	cursor: pointer;
+    }
+
+    .login .imgs .hi {
+    	position: absolute;
+    	left: 50%;
+    	margin-left: -18px;
+    	top: 62px;
+    }
+
+    .login .imgs a {
+    	display: inline-block;
+    	color: #ff5000!important;
+    	background-color: #ffe4db;
+    	height: 20px;
+    	padding: 0;
+    	border-radius: 20px;
+    	padding-right: 10px;
+    }
+
+    .login .imgs i {
+    	display: block;
+    	margin: -18px 0 0 20px;
+    }
+
+    .login .imgs .money {
+    	position: absolute;
+    	width: 196px;
+    	height: 20px;
+    	left: 50%;
+    	margin-left: -98px;
+    	top: 80px;
+    }
+
+    .login .imgs a span {
+    	display: inline-block;
+    	width: 20px;
+    	height: 20px;
+    }
+
+    .login .imgs a .many {
+    	background-image: url(../images/many.png);
+    }
+
+    .login .imgs a .one {
+    	background-position: 0px -571px;
+    }
+
+    .login .imgs a .two {
+    	background-position: 0px -527px;
+    }
+
+    .login .butt {
+    	position: absolute;
+    	width: 258px;
+    	height: 25px;
+    	bottom: 10px;
+    	left: 50%;
+    	margin-left: -129px;
+    }
+
+    .login .butt button {
+    	width: 95px;
+    	height: 25px;
+    	color: #fff;
+    	font-size: 14px;
+    	text-align: center;
+    	line-height: 25px;
+    	outline: none;
+    	border: none;
+    	cursor: pointer;
+    	border-radius: 5px;
+    	background-image: linear-gradient(to right,#ff5000 0,#ff6f06 100%);
+    }
+
+    .login .butt button:nth-of-type(2),
+    .login .butt button:nth-of-type(3) {
+    	width: 77px;
+    }
+
+
+    .middle-right .harmful {
+    	width: 100%;
+    	height: 30px;
+    	background-color: #ffe4dd;
+    }
+
+    .harmful a {
+    	width: 100%;
+    	height: 100%;
+    	display: inline-block;
+    	color: #F40;
+    	line-height: 30px;
+    	margin-left: 75px;
+    	font-family: "icomoon";
+    }
+
+    .harmful a i {
+    	margin-left: 20px;
+    }
+
+
+
+    .middle-right .security {
+    	width: 100%;
+    	height: 110px;
+    	position: relative;
+    	background-color: #fff;
+    }
+
+    .security .gg li {
+    	display: inline-block;
+    	margin: 0 13px;
+    	padding: 0 2px;
+    	height: 30px;
+    	line-height: 42px;
+    	cursor: pointer;
+    	color: #3c3c3c;
+    }
+
+    .security .gg li:nth-of-type(1) {
+    	border-bottom: 2px solid #F40;
+    	font-weight: bold;
+    }
+
+    .security .gg li:hover {
+    	color: #F40;
+    }
+
+    .security .xx {
+    	position: absolute;
+    	width: 260px;
+    	height: 60px;
+    	left: 50%;
+    	margin-left: -130px;
+    	bottom: -1px;
+    }
+
+    .security .one a {
+    	color: #F40;
+    }
+
+    .security .two {
+    	float: left;
+    }
+
+    .security .three {
+    	float: right;
+    }
+
+    .security .nav li {
+    	height: 26px;
+    	line-height: 26px;
+    }
+
+
+
+
+    .middle-right .trip {
+    	width: 100%;
+    	height: 230px;
+    	margin: 1px 0 0 0;
+    }
+
+    .trip li {
+    	display: inline-block;
+    	width: 71px;
+    	height: 75.6px;
+    	background-color: #fff;
+    	margin-right: -1px;
+    	margin-bottom: 1px;
+    }
+
+    .trip li a {
+    	display: inline-block;
+    	color: #3c3c3c;
+    	margin-left: 20px;
+    	margin-top: 15px;
+    }
+
+    .trip li a span {
+    	background-image: url(../images/many.png);
+    	display: inline-block;
+    	width: 24px;
+    	height: 28px;
+    }
+
+    .trip li a .one {
+    	background-position: 0px 0;
+    }
+
+    .trip li a .two {
+    	background-position: 0px -90px;
+    }
+
+    .trip li a .three {
+    	background-position: 0px -45px;
+    }
+
+    .trip li a .four {
+    	background-position: 0px -135px;
+    }
+
+    .trip li a .five {
+    	background-position: 0px -174px;
+    }
+
+    .trip li a .six {
+    	background-position: 0px -221px;
+    }
+
+    .trip li a .seven {
+    	background-position: 0px -265px;
+    }
+
+    .trip li a .eight {
+    	background-position: 0px -310px;
+    }
+
+    .trip li a .nine {
+    	background-position: 0px -350px;
+    }
+
+    .trip li a .ten {
+    	background-position: 0px -395px;
+    }
+
+    .trip li a .eleven {
+    	background-position: 0px -440px;
+    }
+
+    .trip li a .twelve {
+    	background-position: 0px -483px;
+    }
+
+    .trip li a:hover {
+    	color: #f40;
+    }
+
+    .trip .last {
+    	margin-right: -2px;
+    }
+
+
+
+    .middle-right .alapp {
+    	width: 100%;
+    	height: 110px;
+    	position: relative;
+    	background-color: #fff;
+    }
+
+    .alapp .al {
+    	position: absolute;
+    	top: 0;
+    	left: 50%;
+    	margin-left: -130px;
+    	width: 260px;
+    	height: 30px;
+    	line-height: 30px;
+    	color: #3c3c3c;
+    }
+
+    .alapp .al .app {
+    	float: left;
+    	font-size: 14px;
+    	font-weight: bold;
+    }
+
+    .alapp .al .more {
+    	float: right;
+    	cursor: pointer;
+    }
+
+    .al .more i {
+    	font-family: "icomoon";
+    }
+
+    .alapp .img-tb li {
+    	display: inline-block;
+    	width: 36px;
+    	height: 36px;
+    	margin: 0px 7px 5px 7px;
+    }
+
+    .alapp .img-tb li:nth-of-type(1),
+    .alapp .img-tb li:nth-of-type(6) {
+    	margin-left: 20px;
+    }
+
+    .alapp .img-tb li:nth-of-type(1),
+    .alapp .img-tb li:nth-of-type(2),
+    .alapp .img-tb li:nth-of-type(3),
+    .alapp .img-tb li:nth-of-type(4),
+    .alapp .img-tb li:nth-of-type(5) {
+    	margin-top: 27px;
+    }
+
+
+
+    .life {
+    	height: 170px;
+    	background-color: #fff;
+    	margin: 0 auto;
+    	margin-top: 130px;
+    }
+
+    .life .word {
+    	position: relative;
+    	width: 260px;
+    	height: 60px;
+    	padding: 20px 0 0 20px;
+    	box-sizing: border-box;
+    }
+
+    .life .word span {
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -5px;
+    	left: 120px;
+    	color: #999;
+    }
+
+    .life  .life-imgs {
+    	height: 110px;
+    }
+
+    .life .life-imgs li {
+    	float: left;
+    	margin-right: 1px;
+    }
+
+    .life li a {
+    	position: relative;
+    	display: inline-block;
+    	width: 190px;
+    	height: 110px;
+    	color: #333;
+    }
+
+    .life .life-imgs li:nth-of-type(1) {
+    	margin-left: 30px;
+    }
+
+    .life-imgs li span {
+    	text-align: center;
+    	line-height: 82px;
+    	position: absolute;
+    	top: 50%;
+    	margin-top: -41px;
+    	display: block;
+    	width: 82px;
+        height: 82px;
+        border: 1px solid #13d0a1;
+        border-radius: 50%;
+    }
+
+    .life-imgs span img {
+    	width:66px;
+    	height:66px;
+    	border-radius: 50%;
+    	overflow: hidden;
+    	margin-top: 7px;
+    }
+
+    .life li a:hover span {
+    	border-color: #f40;
+    }
+
+    .life-imgs li h4 {
+    	font-size: 16px;
+    	font-weight: normal;
+    	position: absolute;
+    	left: 90px;
+    	top: 26px;
+    }
+
+    .life-imgs p {
+    	position: absolute;
+    	left: 90px;
+    	overflow: hidden;
+        color: #999;
+    }
+
+    .life-imgs p:nth-of-type(1) {
+    	top: 46px;
+    	height: 22px;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .life-imgs p:nth-of-type(2) {
+    	top: 65px;
+    	height: 30px;
+        font-size: 12px;
+        line-height: 30px;
+    }
+
+    .life-imgs p i {
+    	font-family: "icomoon";
+    	color: #13d0a1;
+    }
+
+
+
+    .good-goods {
+    	height: 658px;
+    	margin: 10px auto 0;
+    }
+
+    .good-goods .good-goods-left {
+    	height: 100%;
+    	float: left;
+    	width: 590px;
+    	background-color: #fff;
+    }
+
+    .good-goods .acenter {
+    	width: 550px;
+    	height: 100%;
+    	margin: 0 auto;
+    }
+
+    .good-goods-left .good-goods-left-top,
+    .good-goods-right .good-goods-right-top {
+    	position: relative;
+    	height: 70px;
+    	width: 100%;
+    	padding-top: 22px;
+    	box-sizing: border-box;
+    }
+
+    .good-goods-left-top .word,
+    .good-goods-right-top .word {
+    	position: absolute;
+    	left: 100px;
+    	top: 27px;
+    	color: #999;
+    }
+
+    .good-goods-left-top span i {
+    	font-family: "icomoon";
+    	font-size: 16px;
+        color: #ccc;
+    }
+
+    .good-goods-left-top span span {
+    	display: block;
+    	margin: -16px 0 0 25px
+    }
+
+    .good-goods-right-top span span {
+    	display: block;
+    	margin: 1px 0 0 -30px;
+    }
+
+    .good-goods-left-top a,
+    .good-goods-right-top a {
+    	position: absolute;
+    	top: 50%;
+    	right: 0;
+    	margin-top: -6px;
+    	color: #999 !important;
+    	font-family: "icomoon";
+    }
+
+    .good-goods-left .good-imgs,
+    .good-goods-right .good-imgs {
+    	position: relative;
+    	height: 588px;
+    	width: 100%;
+    }
+
+    .good-goods-left .good-imgs li,
+    .good-goods-right .good-imgs li {
+    	float: left;
+    	margin: 0 4px 30px 0;
+    }
+
+    .good-goods-left .good-imgs li:nth-of-type(3),
+    .good-goods-left .good-imgs li:nth-of-type(6),
+    .good-goods-right .good-imgs li:nth-of-type(3),
+    .good-goods-right .good-imgs li:nth-of-type(6) {
+    	margin-right: 0;
+    }
+
+    .good-goods-left .good-imgs a,
+    .good-goods-right .good-imgs a {
+    	display: inline-block;
+    	width: 180px;
+    	height: 270px;
+    }
+
+    .good-imgs ul:nth-of-type(1) span {
+    	position: absolute;
+    	display: inline-block;
+    	width: 180px;
+    	height: 180px;
+    	opacity: 0.1;
+    	background-color: #4f4f4f;
+    }
+
+    .good-goods-left .good-imgs span:hover,
+    .good-goods-right .good-imgs span:hover {
+    	opacity: 0.2;
+    }
+
+    .good-imgs .two {
+    	position: absolute;
+    	z-index: -1;
+    }
+
+
+    .good-imgs .two li {
+    	display: block;
+    	width: 180px;
+    	height: 181px;
+    	background-color: #4f4f4f;
+    	margin-right: 4px;
+    	opacity: 0.1;
+    	margin-bottom: 120px;
+    	cursor: pointer;
+    }
+
+    .good-imgs .two li:hover {
+    	opacity: 0.2;
+    }
+
+    .good-imgs a h4 {
+    	margin-top: 5px;
+        font-size: 16px;
+        height: 28px;
+        overflow: hidden;
+        line-height: 28px;
+        font-weight: normal;
+        margin-left: 8px;
+    }
+
+    .good-goods-left .good-imgs p {
+    	margin-left: 8px;
+    	line-height: 24px;
+        color: #999;
+        font-size: 14px;
+        overflow: hidden;
+        height: 24px;
+    }
+
+    .good-goods-right .good-imgs p {
+    	margin-left: 8px;
+    	line-height: 22px;
+        color: #999;
+        font-size: 14px;
+        overflow: hidden;
+        height: 48px;
+        margin-top: 10px;
+    }
+
+    .good-imgs a p:nth-of-type(2) {
+    	line-height: 18px;
+        height: 18px;
+        margin-top: 12px;
+        color: #35b1ff;
+        font-family: "icomoon";
+    }
+
+    .good-goods .good-goods-right {
+    	height: 658px;
+    	float: right;
+    	width: 590px;
+    	background-color: #fff;
+    }
+
+    .good-goods-right p i {
+    	font-family: "icomoon";
+    	color: #ebebeb;
+    	margin-right: 4px;
+    }
+
+    .good-goods-right .good-imgs .ag1 {
+    	line-height: 42px;
+        height: 40px;
+        font-size: 12px;
+        color: #999;
+        margin-top: 5px;
+    }
+
+    .good-goods-right .good-imgs strong {
+    	display: block;
+    	font-weight: normal;
+    	margin: -51px 0 0 36px;
+    }
+
+    .good-goods-right .good-imgs li {
+    	margin-bottom: 13px;
+    }
+
+    .good-goods-right .good-imgs a:hover .hov {
+    	color: #f40;
+    }
+
+    .good-goods-right  p img {
+    	width: 25px;
+    	height: 25px;
+    	border-radius: 50%;
+    	background-size: 25px 25px;
+    }
+
+
+
+
+    .tqg {
+    	height: 265px;
+    	background-color: #fff;
+    	margin: 10px auto 0;
+    	padding: 21px;
+    	box-sizing: border-box;
+    }
+
+    .tqg .tqg-top {
+    	position: relative;
+    	height: 45px;
+    	width: 1148px;
+
+    }
+
+    .tqg .tqg-top i {
+    	position: absolute;
+    	color: #999;
+    	left: 96px;
+    	top: 6px;
+    }
+
+    .tqg .tqg-top .all {
+    	position: absolute;
+    	left: 130px;
+    	display: inline-block;
+    	width: 100px;
+    	background-color: transparent;
+
+    	color: #f40;
+
+    }
+
+    .tqg .tqg-top span {
+    	text-align: center;
+    	display: inline-block;
+    	width: 21px;
+    	height: 21px;
+    	line-height: 21px;
+    	background-color: #ffe4dd;
+    	border-radius: 2px;
+    	font-weight: bold;
+
+    }
+
+    .tqg .all span:nth-of-type(2),
+    .tqg .all span:nth-of-type(4) {
+    	width: 4px;
+    	background-color: #fff;
+    }
+
+    .tqg .tqg-top .more {
+    	position: absolute;
+    	right: 0;
+    	width: 110px;
+    	color: #999;
+    	background-color: #fff;
+
+    }
+
+    .tqg-top .more span {
+    	width: 40px;
+    	cursor: pointer;
+    	background-color: #fff;
+    	font-weight: normal;
+    }
+
+    .tqg-top .more i {
+    	font-family: "icomoon";
+    	display: block;
+    	margin: -5px 0 0 -10px;
+    }
+
+    .tqg-bottom ul li {
+    	position: relative;
+    	float: left;
+    }
+
+    .tqg-bottom ul a {
+    	display: inline-block;
+    	width: 360px;
+    	height: 180px;
+    	padding-right: 13px;
+    	padding-left: 14px;
+    }
+
+    .tqg-bottom ul li:nth-of-type(1) a {
+    	padding-left: 0;
+    }
+
+    .tqg-bottom a .tran {
+    	position: absolute;
+    	display: inline-block;
+    	width: 182px;
+    	height: 182px;
+    	background-color: #4f4f4f;
+    	opacity: 0.1;
+    }
+
+    .tqg-bottom a .tran:hover {
+    	opacity: 0.2;
+    }
+
+    .tqg-bottom a:hover h4 {
+    	color: #f40;
+    }
+
+    .tqg-bottom .info {
+    	position: absolute;
+    	width: 170px;
+    	height: 145px;
+    	display: inline-block;
+    	right: 11px;
+    	top: 19px;
+    }
+
+    .tqg-bottom .info h4 {
+        line-height: 22px;
+        height: 44px;
+        overflow: hidden;
+        font-size: 16px;
+        color: #333;
+        font-weight: normal;
+    }
+
+    .tqg-bottom .info p {
+    	margin-top: 12px;
+        line-height: 28px;
+        color: #999;
+    }
+
+    .info .oneh {
+    	display: block;
+    	width: 159px;
+        height: 6px;
+        border-radius: 3px;
+        background: #FFE4Dc;
+        margin-top: -1px;
+    }
+
+    .info .oneh .fifty {
+    	position: absolute;
+    	display: inline-block;
+    	width: 15%;
+        height: 6px;
+        border-radius: 3px;
+        background: #FE3338;
+    }
+
+    .info .jd {
+    	display: block;
+    	position: relative;
+    	margin-top: -13px;
+    	width: 159px;
+    }
+
+    .info .jd p {
+    	position: absolute;
+    	color: #FE3338;
+    }
+
+    .info .jd p:nth-of-type(1) {
+    	left: 0;
+    }
+
+    .info .jd p:nth-of-type(2) {
+    	right: 0;
+    }
+
+    .info .del {
+    	display: block;
+    	margin-top: 46px;
+    }
+
+    .info .del span {
+    	font-size: 20px;
+        color: #ff5000;
+    }
+
+    .info .del del {
+    	color: #999;
+        margin-left: 6px;
+    }
+
+
+
+    .banner {
+    	margin: 10px auto 0;
+    }
+
+
+
+    .good-day {
+    	height: 540px;
+    	margin: 10px auto 0;
+    }
+
+    .good-day .good-day-left,
+    .good-day .good-day-right  {
+    	width: 590px;
+    	height: 100%;
+    	padding: 20px;
+    	box-sizing: border-box;
+    	background-color: #fff;
+    }
+
+    .good-day .good-day-left {
+    	float: left;
+    }
+
+    .good-day .good-day-right {
+    	float: right;
+    }
+
+    .good-day .good-day-left-top {
+    	position: relative;
+    	width: 550px;
+    	height: 40px;
+    	color: #999;
+    }
+
+    .good-day .good-day-left-top a {
+    	color: #999 !important;
+    }
+
+    .good-day .good-day-left-top span {
+    	position: absolute;
+    	left: 92px;
+    	top: 6px;
+    }
+
+    .good-day .good-day-left-top .more {
+    	position: absolute;
+    	right: 0;
+    	top: 6px;
+    }
+
+    .good-day .good-day-left-top i {
+    	display: inline-block;
+    	font-family: "icomoon";
+    	margin-left: -5px;
+    }
+
+    .good-day .good-day-left-center,
+    .good-day .good-day-left-bottom {
+    	height: 233px;
+    }
+
+    .good-day .good-day-left-center a {
+    	display: inline-block;
+    	width: 270px;
+    	height: 213px;
+    	padding-bottom: 20px;
+    }
+
+    .good-day .good-day-left-center .tuijian,
+    .good-day .good-day-left-bottom .tuijian {
+    	float: left;
+    }
+
+    .good-day-left-center .word,
+    .good-day-left-bottom .word {
+    	display: inline-block;
+    	width: 100%;
+    	height: 30px;
+    }
+
+    .good-day-left-center .word h4,
+    .good-day-left-bottom .word h4 {
+    	display: inline-block;
+    	font-size: 16px;
+    	font-weight: normal;
+    }
+
+    .good-day-left-center .word i,
+    .good-day-left-bottom .word i {
+    	display: inline-block;
+    	color: #999;
+        font-size: 12px;
+        margin-left: 6px;
+    }
+
+    .tuijian:hover h4 {
+    	color: #ff5000;
+    }
+
+    .good-day-left-center .imgs-tuijian,
+    .good-day-left-bottom .imgs-tuijian {
+    	width: 270px;
+    	height: 183px;
+    }
+
+    .good-day-left-center .imgs-tuijian .one {
+    	display: inline-block;
+    	float: left;
+    	height: 100%;
+    	width: 179px;
+    	background-image: url(../images/bag.webp);
+    }
+
+    .good-day-left-center .tuijian1 .one,
+    .good-day-left-bottom .tuijian1 .one {
+    	margin: -183px 0px 0px 0px;
+    	display: inline-block;
+    	float: left;
+    	height: 183px;
+    	width: 179px;
+    	background-color: #4f4f4f;
+    	opacity: 0.1;
+    }
+
+    .good-day-left-center .tuijian1 .two,
+    .good-day-left-center .tuijian1 .three,
+    .good-day-left-bottom .tuijian1 .two,
+    .good-day-left-bottom .tuijian1 .three {
+    	float: right;
+    	display: block;
+    	width: 89px;
+    	height: 90px;
+    	background-color: #4f4f4f;
+    	opacity: 0.1;
+    }
+
+    .good-day-left-center .tuijian1 .two,
+    .good-day-left-bottom .tuijian1 .two {
+    	margin: -183px -89px 0 0px;
+    }
+
+    .good-day-left-center .tuijian1 .three,
+    .good-day-left-bottom .tuijian1 .three {
+    	margin: -90px -89px 0 0px;
+    }
+
+    .good-day-left-center .tuijian1 .one:hover,
+    .good-day-left-center .tuijian1 .two:hover,
+    .good-day-left-center .tuijian1 .three:hover,
+    .good-day-left-bottom .tuijian1 .one:hover,
+    .good-day-left-bottom .tuijian1 .two:hover,
+    .good-day-left-bottom .tuijian1 .three:hover {
+    	opacity: 0.2
+    }
+
+    .good-day-left-center .imgs-tuijian .two {
+    	margin-bottom: 3px;
+    	background-image: url(../images/good_shoe.webp);
+    	background-size: 89px 90px;
+    }
+
+    .good-day-left-center .imgs-tuijian .three {
+    	margin-bottom: 3px;
+    	background-image: url(../images/good.webp);
+    	background-size: 89px 90px;
+    }
+
+    .good-day-left-center .imgs-tuijian .two,
+    .good-day-left-center .imgs-tuijian .three,
+    .good-day-left-bottom .imgs-tuijian .two,
+    .good-day-left-bottom .imgs-tuijian .three {
+    	float: right;
+    	display: block;
+    	width: 89px;
+    	height: 90px;
+    }
+
+
+    .good-day .good-day-left-center .ns,
+    .good-day .good-day-left-bottom .ns {
+    	float: right;
+    }
+
+    .ns .imgs-tuijian .one {
+    	display: inline-block;
+    	float: left;
+    	height: 100%;
+    	width: 179px;
+    	background-image: url(../images/ns1.webp);
+    }
+
+    .ns .imgs-tuijian .two {
+    	margin-bottom: 3px;
+    	background-image: url(../images/ns2.webp);
+    	background-size: 89px 90px;
+    }
+
+    .ns .imgs-tuijian .three {
+    	margin-bottom: 3px;
+    	background-image: url(../images/ns3.webp);
+    	background-size: 89px 90px;
+    }
+
+
+    .good-day .good-day-left-bottom a {
+    	display: inline-block;
+    	width: 270px;
+    	height: 213px;
+    	padding-top: 20px;
+    }
+
+    .good-day-left-bottom .imgs-tuijian .one {
+    	display: inline-block;
+    	float: left;
+    	height: 100%;
+    	width: 179px;
+    	background-image: url(../images/nanren.webp);
+    }
+
+    .good-day-left-bottom .imgs-tuijian .two {
+    	margin-bottom: 3px;
+    	background-image: url(../images/nanren.webp);
+    	background-size: 89px 90px;
+    }
+
+    .good-day-left-bottom .imgs-tuijian .three {
+    	margin-bottom: 3px;
+    	background-image: url(../images/nanren.webp);
+    	background-size: 89px 90px;
+    }
+
+    .good-day-left-bottom .ns .imgs-tuijian  .one {
+    	display: inline-block;
+    	float: left;
+    	height: 100%;
+    	width: 179px;
+    	background-image: url(../images/beaty1.webp);
+    }
+
+    .good-day-left-bottom .ns .imgs-tuijian  .two {
+    	margin-bottom: 3px;
+    	background-image: url(../images/beaty2.webp);
+    	background-size: 89px 90px;
+    }
+
+    .good-day-left-bottom .ns .imgs-tuijian  .three {
+    	margin-bottom: 3px;
+    	background-image: url(../images/beaty3.webp);
+    	background-size: 89px 90px;
+    }
+
+
+    .good-day-right-top {
+    	position: relative;
+    	width: 550px;
+    	height: 40px;
+    	color: #999;
+    }
+
+    .good-day-right-top span {
+    	position: absolute;
+    	left: 115px;
+    	top: 4px;
+    }
+
+    .good-day-right .good-day-left-center .imgs-tuijian .one {
+    	background-image: url(../images/good_right1.webp);
+    }
+
+    .good-day-right .good-day-left-center .imgs-tuijian .two {
+    	background-image: url(../images/good_right2.webp);
+    }
+
+    .good-day-right .good-day-left-center .imgs-tuijian .three {
+    	background-image: url(../images/good_right3.webp);
+    }
+
+    .good-day-right .good-day-left-center .ns .imgs-tuijian .one {
+    	background-image: url(../images/good_right4.webp);
+    }
+
+    .good-day-right .good-day-left-center .ns .imgs-tuijian .two {
+    	background-image: url(../images/good_right5.webp);
+    }
+
+    .good-day-right .good-day-left-center .ns .imgs-tuijian .three {
+    	background-image: url(../images/good_right6.webp);
+    }
+
+
+    .good-day-right .good-day-left-bottom .imgs-tuijian .one {
+    	background-image: url(../images/good_right7.webp);
+    }
+
+    .good-day-right .good-day-left-bottom .imgs-tuijian .two {
+    	background-image: url(../images/good_right8.webp);
+    }
+
+    .good-day-right .good-day-left-bottom .imgs-tuijian .three {
+    	background-image: url(../images/good_right9.webp);
+    }
+
+    .good-day-right .good-day-left-bottom .ns .imgs-tuijian .one {
+    	background-image: url(../images/good_right10.webp);
+    }
+
+    .good-day-right .good-day-left-bottom .ns .imgs-tuijian .two {
+    	background-image: url(../images/good_right11.webp);
+    }
+
+    .good-day-right .good-day-left-bottom .ns .imgs-tuijian .three {
+    	background-image: url(../images/good_right12.webp);
+    }
+
+    .good-day-right .tuijian {
+    	position: relative;
+    }
+
+    .good-day-right .ns {
+    	position: relative;
+    }
+
+    .good-day-right .live {
+    	position: absolute;
+    	bottom: 37px;
+    	left: 5px;
+    	display: inline-block;
+    	width: 165px;
+    	height: 15px;
+    	color: #fff;
+    	z-index: 1;
+    	line-height: 15px;
+    }
+
+    .good-day-right .posi {
+    	bottom: 20px;
+    }
+
+
+    .good-day-right .live i:nth-of-type(2) {
+    	font-family: "icomoon";
+    	margin-left: -6px;
+    }
+
+    .good-day-right .live .new {
+    	display: inline-block;
+    	padding-left: 5px;
+    	width: 36px;
+    	height: 15px;
+    	border-radius: 3px;
+    	background-color: #ff2658;
+    }
+
+    .good-day-right .live strong {
+    	color: #fff;
+    	font-size: 12px;
+    	font-weight: normal;
+    }
+
+
+
+
+
+
+    .fashion {
+    	height: 290px;
+    	margin: 10px auto 0;
+    }
+
+    .fashion .fashion-left {
+    	float: left;
+    	width: 840px;
+    	height: 100%;
+    }
+
+    .fashion .fashion-left-top {
+    	background-color: #fff;
+    	position: relative;
+    	padding: 20px 0 0 20px;
+    	box-sizing: border-box;
+    	width: 840px;
+    	height: 55px;
+    }
+
+    .fashion .fashion-left-top span {
+    	display: inline-block;
+    	height: 18px;
+    	border-left: 5px solid #AD45Df;
+    	padding-left: 12px;
+    	box-sizing: border-box;
+    }
+
+    .fashion .fashion-left-top h3 {
+    	font-size: 20px;
+    	color: #AD45Df;
+    	margin: -22px 0 0 17px;
+    }
+
+    .fashion-left-bottom {
+    	height: 235px;
+    	width: 100%;
+    	margin-top: 1px;
+
+    }
+
+
+    .fashion-left-bottom .fashion-left-bottom-info {
+    	padding: 20px;
+    	padding-right: 10px;
+    	box-sizing: border-box;
+    	height: 235px;
+    	width: 279px;
+    	background-color: #fff;
+    	float: left;
+    	margin-right: 1px;
+    	border: 1px solid transparent;
+    }
+
+    .fashion-left-bottom .fashion-left-bottom-info:hover {
+    	border-color: #ff5000;
+    }
+
+    .fashion-left-bottom-info .info {
+    	height: 48px;
+    }
+
+    .fashion-left-bottom-info .info a {
+    	display: inline-block;
+    	font-size: 18px;
+    	color: #3c3c3c;
+    	height: 27px;
+    }
+
+    .fashion-left-bottom-info .info p {
+    	color: #999;
+    }
+
+    .fashion-left-bottom-info .imgs {
+    	padding-top: 15px;
+    	box-sizing: border-box;
+    	height: 159px;
+    }
+
+    .fashion-left-bottom-info .imgs a:nth-of-type(1) {
+    	float: left;
+    }
+    .fashion-left-bottom-info .imgs a:nth-of-type(2) {
+    	float: right;
+    }
+
+
+    .fashion .fashion-right {
+    	float: right;
+    	background-color: #fff;
+    	width: 340px;
+    	height: 100%;
+    	padding: 20px;
+    	box-sizing: border-box;
+    	border: 1px solid transparent;
+    }
+
+    .fashion .fashion-right:hover {
+    	border-color: #ff5000;
+    }
+
+
+
+
+
+    .pz-ts {
+    	height: 763px;
+    	margin: 10px auto 0;
+    }
+
+    .pz-ts .pz-ts-left {
+    	width: 590px;
+    	height: 763px;
+    	float: left;
+    }
+
+    .pz-ts .pz-ts-top {
+    	height: 55px;
+    	padding: 17px 0 0 20px;
+    	box-sizing: border-box;
+    	background-color: #fff;
+    	margin-bottom: 1px;
+    }
+
+    .pz-ts .pz-ts-top span {
+    	display: block;
+    	float: left;
+    	width: 5px;
+    	height: 18px;
+    	margin: 3px 12px 0 0;
+    	background-color: #28ABFF;
+    }
+
+    .pz-ts .pz-ts-top h3 {
+    	float: left;
+    	color: #28ABFF;
+    	font-size: 20px;
+    }
+
+    .pz-ts .pz-ts-bottom {
+    	height: 707px;
+    	width: 100%;
+    }
+
+    .pz-ts .pz-ts-bottom .pz-ts-bottom-left {
+    	width: 294px;
+    	height: 100%;
+    	float: left;
+    }
+
+    .pz-ts-bottom-left-one span {
+    	display: block;
+    	position: absolute;
+    	width: 254px;
+    	height: 317px;
+    	background-color: #4f4f4f;
+    	z-index: 1;
+    	top: 20px;
+    	left: 20px;
+    	opacity: 0.1;
+    }
+
+    .pz-ts .pz-ts-bottom-left-one a {
+    	position: relative;
+    	display: block;
+    	padding: 20px;
+    	box-sizing: border-box;
+    	width: 100%;
+    	height: 353px;
+    	background-color: #fff;
+    	margin-bottom: 1px;
+    }
+
+    .pz-ts .pz-ts-bottom-left-two ,
+    .pz-ts .pz-ts-bottom-left-three ,
+    .pz-ts .pz-ts-bottom-left-four a {
+    	display: block;
+    	width: 100%;
+    	height: 117px;
+    	padding: 10px 42px 0 40px ;
+    	box-sizing: border-box;
+    	background-color: #fff;
+    	margin-bottom: 1px;
+    	position: relative;
+    }
+
+    .pz-ts-bottom-left-two img,
+    .pz-ts-bottom-left-three img,
+    .pz-ts-bottom-left-four img {
+    	float: right;
+    }
+
+    .pz-ts-bottom-left-two p,
+    .pz-ts-bottom-left-two h4,
+    .pz-ts-bottom-left-three p,
+    .pz-ts-bottom-left-three h4,
+    .pz-ts-bottom-left-four p,
+    .pz-ts-bottom-left-four h4 {
+    	display: inline-block;
+    	position: absolute;
+    }
+
+
+    .pz-ts-bottom-left-two h4,
+    .pz-ts-bottom-left-three h4,
+    .pz-ts-bottom-left-four h4 {
+    	top: 42px;
+    	left: 34px;
+    	font-size: 18px;
+        color: #333;
+        font-weight: normal;
+    }
+
+    .pz-ts-bottom-left-two p,
+    .pz-ts-bottom-left-three p,
+    .pz-ts-bottom-left-four p {
+    	top: 70px;
+    	left: 34px;
+        color: #999;
+    }
+
+    .pz-ts-bottom .pz-ts-bottom-left div {
+    	border: 1px solid transparent;
+    }
+
+    .pz-ts-bottom .pz-ts-bottom-left div:hover {
+    	border-color: #ff5000;
+    }
+
+    .pz-ts-bottom .pz-ts-bottom-left div:hover .mb {
+    	opacity: 0.2;
+    }
+
+    .pz-ts-bottom .pz-ts-bottom-right div{
+    	border: 1px solid transparent;
+    }
+
+    .pz-ts-bottom .pz-ts-bottom-right div:hover {
+    	border-color: #ff5000;
+    }
+
+
+    .pz-ts .pz-ts-bottom .pz-ts-bottom-right {
+    	width: 295px;
+    	height: 100%;
+    	float: right;
+    }
+
+    .pz-ts .pz-ts-bottom-right-one a,
+    .pz-ts-bottom-right-two a,
+    .pz-ts-bottom-right-three a {
+    	position: relative;
+    	display: block;
+    	width: 100%;
+    	height: 235px;
+    	margin-bottom: 1px;
+    	background-color: #fff;
+    	padding: 30px 19px;
+    	box-sizing: border-box;
+    }
+
+    .pz-ts .pz-ts-bottom-right h4,
+    .pz-ts .pz-ts-bottom-right p {
+    	position: absolute;
+    	float: left;
+    }
+
+    .pz-ts .pz-ts-bottom-right h4 {
+    	top: 40px;
+    	left: 30px;
+    	font-size: 18px;
+        color: #333;
+        font-weight: normal;
+    }
+
+    .pz-ts .pz-ts-bottom-right p {
+    	top: 45px;
+    	left: 90px;
+        color: #999;
+    }
+
+    .pz-ts-right .pz-ts-bottom-right-one p,
+    .pz-ts .pz-ts-bottom-right-two p,
+    .pz-ts .pz-ts-bottom-right-three p {
+    	left: 107px;
+    }
+
+    .pz-ts-bottom-right a img {
+    	position: absolute;
+    }
+
+    .pz-ts-bottom-right a img:nth-of-type(1) {
+    	left: 14px;
+    	top: 90px;
+    }
+
+    .pz-ts-bottom-right a img:nth-of-type(2) {
+    	left: 155px;
+    	top: 90px;
+    }
+
+    .pz-ts .pz-ts-right {
+    	width: 590px;
+    	height: 763px;
+    	float: right;
+    }
+
+    .pz-ts-right .pz-ts-top span {
+    	background-color: #ff5000;
+    }
+
+    .pz-ts-right .pz-ts-top h3 {
+    	color: #ff5000;
+    }
+
+
+
+
+    .affordable {
+    	height: 255px;
+    	margin: 10px auto 0;
+    }
+
+    .affordable .affordable-top {
+    	width: 100%;
+    	height: 55px;
+    	background-color: #fff;
+    	margin-bottom: 1px;
+    	padding: 17px 0 0 20px;
+    	box-sizing: border-box;
+    }
+
+    .affordable-top span {
+    	display: block;
+    	float: left;
+    	width: 5px;
+    	height: 18px;
+    	background-color: #31ba98;
+    	margin: 3px 12px 0 0;
+    }
+
+    .affordable-top h3 {
+    	float: left;
+    	font-size: 20px;
+    	color: #31ba98;
+    }
+
+    .affordable-bottom {
+    	width: 100%;
+    	height: 199px;
+    }
+
+    .affordable-bottom div {
+    	padding: 30px 0 0 20px;
+    	box-sizing: border-box;
+    	float: left;
+    	height: 100%;
+    	width: 237px;
+    	background-color: #fff;
+    	margin-right: 1px;
+    }
+
+    .affordable-bottom .last {
+    	width: 238px;
+    	margin-right: 0;
+    }
+
+    .affordable-bottom .all {
+    	border: 1px solid transparent;
+    }
+
+    .affordable-bottom .all:hover {
+    	border-color: #ff5000;
+    }
+
+    .affordable-bottom h4 a {
+    	font-size: 18px;
+        color: #333;
+        font-weight: normal;
+    }
+
+    .affordable-bottom .clothes {
+    	padding: 15px 0 0 0;
+    	width: 210px;
+        height: 135px;
+    	box-sizing: border-box;
+    	position: relative;
+    }
+
+    .affordable-bottom .clothes p {
+    	position: absolute;
+    }
+
+    .affordable-bottom .clothes p:nth-of-type(1) {
+    	top: 30px;
+    	left: 130px;
+    	font-size: 16px;
+    	color: #333;
+    }
+
+    .affordable-bottom .clothes p:nth-of-type(2) {
+    	top: 52px;
+    	left: 130px;
+    	font-size: 14px;
+    	color: #999;
+    }
+
+    .affordable-bottom .clothes p:nth-of-type(3) {
+    	top: 85px;
+    	left: 130px;
+    }
+
+    .affordable-bottom .clothes p:nth-of-type(3) a {
+    	display: inline-block;
+    	width: 76px;
+    	height: 22px;
+    	border: 1px solid #ff5000;
+        color: #ff5000;
+    	border-radius: 12px;
+    	font-size: 10px !important;
+    	line-height: 22px;
+    	text-align: center;
+    	font-size: 14px;
+    }
+
+
+
+
+    .hot-single {
+    	height: 962px;
+    	margin: 10px auto 0;
+    }
+
+    .hot-single-top {
+    	width: 100%;
+    	height: 90px;
+    	padding: 18px 0 0 10px;
+    	box-sizing: border-box;
+    	margin-bottom: 1px;
+    	background-color: #fff;
+    }
+
+    .hot-single-top .hot-single-top-top {
+    	height: 24px;
+    	background-color: #fff;
+    }
+
+    .hot-single-top .hot-single-top-top span {
+    	float: left;
+    	display: inline-block;
+    	width: 5px;
+    	height: 18px;
+    	background-color: #ff242d;
+    	margin: 1px 10px 0 0;
+    }
+
+    .hot-single-top .hot-single-top-top h3 {
+    	float: left;
+    	font-size: 20px;
+    	color: #ff242d;
+    }
+
+    .hot-single-top .hot-single-top-bottom {
+    	height: 48px;
+    }
+
+    .hot-single-top .hot-single-top-bottom ul {
+    	float: left;
+    }
+
+    .hot-single-top .hot-single-top-bottom li {
+    	float: left;
+    }
+
+    .hot-single-top .hot-single-top-bottom a {
+    	display: inline-block;
+    	width: max-content;
+    	height: 48px;
+    	padding-right: 15px;
+    	line-height: 48px;
+    	color: #999;
+    }
+
+    .hot-single-top .hot-single-top-bottom {
+    	position: relative;
+    }
+
+    .hot-single-top .hot-single-top-bottom img {
+    	position: absolute;
+    	right: 12px;
+    	top: 50%;
+    	margin-top: -10px;
+    }
+
+    .hot-single .hot-single-info {
+    	height: 350px;
+    	margin-bottom: 1px;
+    }
+
+    .hot-single-info .hot-single-info-all {
+    	float: left;
+    	width: 237px;
+    	height: 350px;
+    	margin-right: 1px;
+    	background-color: #fff;
+    	padding: 20px;
+    	box-sizing: border-box;
+    }
+
+    .hot-single-info .hot-single-info-all {
+    	border: 1px solid transparent;
+    }
+
+    .hot-single-info .hot-single-info-all:hover {
+    	border-color: #ff5000;
+    }
+
+    .hot-single-info .hot-single-info-all .line-1 {
+    	display: inline-block;
+    	width: 197px;
+    	height: 40px;
+    	position: relative;
+    	margin: 8px 0;
+    }
+
+    .hot-single-info .line-1 img {
+    	position: absolute;
+    	left: 0px;
+     }
+
+    .hot-single-info .line-1 h4 {
+    	line-height: 20px;
+    	text-indent: 33px;
+    	color: #666;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .hot-single-info .line-1.posi h4 {
+    	text-indent: 0px;
+    }
+
+
+    .hot-single-info .line-2 {
+    	width: 192px;
+    	height: 18px;
+    	margin-bottom: 12px;
+
+    }
+
+    .hot-single-info .line-2 a {
+    	margin-right: 10px;
+    	color: #999  !important;
+    }
+
+    .hot-single-info .line-2 em {
+    	font-style: normal;
+    }
+
+    .hot-single-info .line-3 {
+    	width: 197px;
+    }
+
+    .hot-single-info .line-3 a {
+    	color: #ff5000;
+    }
+
+    .hot-single-info .line-3 span {
+    	font-size: 22px;
+    	color: #ff5000;
+    }
+
+    .hot-single-info .line-3 del {
+    	color: #999;
+    }
+
+    .hot-single-info .line-3 del:hover {
+    	text-decoration: none;
+    }
+
+    .hot-single-info .line-3 .month {
+    	color: #999  !important;
+    	float: right;
+    	display: inline-block;
+    	margin: -14px 0 0 125px;
+    }
+
+    .hot-single-info .line-3 em {
+    	font-style: normal;
+    }
+
+    .hot-single .hot-single-bottom {
+    	width: 100%;
+    	height: 170px;
+    	background-color: #fff;
+    	padding: 20px 0 0 18px;
+    	box-sizing: border-box;
+    }
+
+    .hot-single .hot-single-bottom a {
+    	display: inline-block;
+    	width: 375px;
+    	height: 130px;
+    	margin-right: 12px;
+    }
+
+    .hot-single .hot-single-bottom a:nth-of-type(3) {
+    	margin-right: 0;
+    }
+
+    .hot-single .hot-single-bottom a {
+    	border: 2px solid transparent;
+    }
+
+    .hot-single .hot-single-bottom a:hover {
+    	border-color: #f40;
+    }
+
+
+
+
+
+    .favorite {
+    	height: 1739px;
+    	margin: 10px auto 0;
+    }
+
+    .favorite .favorite-top {
+    	box-sizing: border-box;
+    	width: 100%;
+    	height: 55px;
+    	background-color: #fff;
+    	margin-bottom: 1px;
+    	padding: 18px;
+    }
+
+    .favorite .favorite-top span {
+    	display: inline-block;
+    	float: left;
+    	margin: 2px 10px 0 0;
+    	width: 5px;
+    	height: 18px;
+    	background-color: #ff9f00;
+    }
+
+    .favorite .favorite-top h3 {
+    	color:  #ff9f00;
+    	font-size: 20px;
+    }
+
+    .favorite .favorite-info {
+    	position: relative;
+    	margin-bottom: 1px;
+    	height: 335px;
+    	width: 100%;
+    }
+
+    .favorite-info .favorite-info-all {
+    	width: 237px;
+    	height: 335px;
+    	margin-right: 1px;
+    	background-color: #fff;
+    	float: left;
+    	padding: 20px;
+    	box-sizing: border-box;
+    }
+
+    .favorite-info .favorite-info-all {
+    	border: 1px solid transparent;
+    }
+
+    .favorite-info .favorite-info-all:hover {
+    	border-color: #F40;
+    }
+
+    .favorite-info .favorite-info-all:nth-of-type(5) {
+    	margin-right: 0;
+    }
+
+    .favorite-info .favorite-info-all a:nth-of-type(2) {
+    	display: block;
+    	width: 196px;
+    	height: 44px;
+    	margin-top: 7px;
+    	font-size: 14px;
+        /*color: #666 !important;*/
+        color: #666;
+        overflow: hidden;
+        line-height: 22px;
+    }
+
+    .favorite-info .favorite-info-all:hover a:nth-of-type(2) {
+    	color: #666;
+    }
+
+    .favorite-info .favorite-info-all a:nth-of-type(3) {
+    	display: block;
+    	color: #F40;
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .favorite-info-all a:nth-of-type(3) em {
+    	font-style: normal;
+    	font-size: 12px;
+    }
+
+    .favorite-info-all .borradiu {
+    	border-radius: 3px;
+    }
+
+    .favorite-info-all .sales {
+    	float: right;
+    	color: #9ca0aa;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .favorite-info-all .mb {
+    	position: relative;
+    }
+
+    .favorite-info-all .mb span {
+    	display: block;
+    	position: absolute;
+    	width: 200px;
+    	height: 200px;
+    	background: #4f4f4f;
+    	top: -187px;
+    	left: 0px;
+    	opacity: 0.1;
+    }
+
+    .favorite-info-all .mb span:hover  {
+    	opacity: 0.2;
+    }
+
+
+    .favorite-info-hover {
+    	display: none;
+    	position: absolute;
+    	width: 236px;
+        height: 84px;
+    	background-color: #FF5000;
+    	bottom: 0;
+    	padding: 24px 0 0 58px;
+    	box-sizing: border-box;
+    	cursor: pointer;
+    	margin-left: -21px;
+    }
+
+    .favorite-info-hover a {
+    	display: block;
+    	color: #fff !important;
+    }
+
+    .favorite-info-hover span {
+    	width: 120px;
+    	height: 1px;
+    	background-color: #fff;
+    	display: block;
+    	margin: 8px 0;
+    	opacity: 0.5;
+    }
+
+    .favorite-info-hover .similiar {
+    	margin-left: 30px;
+    }
+
+    .favorite-info-hover i {
+    	font-family: "icomoon";
+    	color: #fff;
+    }
+
+    .favorite-info-all:hover .favorite-info-hover {
+    	display: block;
+    }
+
+
+
+
+
+
+
+
+
+    .footer {
+    	position: relative;
+    	height: 260px;
+    	margin: 0 auto;
+    }
+
+    .footer .end {
+    	position: relative;
+    	width: 230px;
+    	height: 52px;
+    	line-height: 52px;
+    	margin: 0 auto;
+    }
+
+    .footer .end i {
+    	font-size: 18px;
+    	position: absolute;
+    	right: calc(50% - 19px);
+    	color: #ccccd0;
+    }
+
+    .footer .end .space {
+    	position: absolute;
+    	top: 50%;
+    	display: inline-block;
+    	width: 60px;
+    	height: 1px;
+    	background-color: #e6e6e6;
+    }
+
+    .footer .end .space:nth-of-type(2) {
+    	right: 0;
+    }
+
+    .footer div.xfz,
+     .footer div.new,
+     .footer div.style,
+     .footer div.special {
+    	float: left;
+    	width: 220px;
+    	height: 100px;
+    	margin: 55px 38px 0;
+    	position: relative;
+    }
+
+    .footer .xfz span,
+    .footer .new span,
+    .footer .style span,
+    .footer .special span {
+    	position: absolute;
+    	font-size: 16px;
+    	color: #3C3C3C;
+    	font-weight: bold;
+    	left: 50px;
+    	top: 12px;
+
+    }
+
+    .footer ul {
+    	position: absolute;
+    	left: 2px;
+    	margin-top: 10px;
+    }
+
+    .footer li {
+    	float: left;
+    	line-height: 21px;
+    	margin-right: 12px;
+    }
+
+    .footer  li a  {
+    	color: #999;
+    }
+
+
+
+
+
+    .bottom-footer {
+    	width: 100%;
+    	height: 250px;
+    	background-color: #fff;
+    }
+
+    .bottom-footer .bottom-footer-all {
+    	margin: 0 auto;
+    	height: 250px;
+    }
+
+    .bottom-footer-all .bottom-footer-top {
+    	width: 100%;
+    	height: 70px;
+    	border-top: 1px solid #ddd;
+    	border-bottom: 1px solid #ddd;
+    	padding-top: 7px;
+    }
+
+    .bottom-footer-all .bottom-footer-top li {
+    	float: left;
+    	line-height: 30px;
+    }
+
+    .bottom-footer-top li a {
+    	color: #6c6c6c !important;
+    }
+
+    .bottom-footer-top li a:hover {
+    	color: #F40 !important;
+    }
+
+    .bottom-footer-all .bottom-footer-top .space {
+    	width: 2px;
+    	height: 12px;
+    	background-color: #ddd;
+    	margin: 9px 9px 0;
+    }
+
+    .bottom-footer-all .bottom-footer-top ul {
+    	display: block;
+    	width: 100%;
+    	height: 30px;
+    }
+
+    .bottom-footer-all .bottom-footer-center {
+    	width: 100%;
+    	height: 80px;
+    }
+
+    .bottom-footer-center ul {
+    	display: block;
+    	width: 100%;
+    	height: 28px;
+    }
+
+    .bottom-footer-center li {
+    	float: left;
+    	padding: 0 5px;
+    	line-height: 28px;
+    	color: #9c9c9c;
+    }
+
+    .bottom-footer-center li a {
+    	color: #6c6c6c !important;
+    }
+
+    .bottom-footer-center .space {
+    	width: 2px;
+    	height: 12px;
+    	background-color: #ddd;
+    	padding: 0;
+    	margin: 14px 35px 0 11px;
+    }
+
+    .bottom-footer-center li a:hover {
+    	color: #F40 !important;
+    }
+
+    .bottom-footer-center .space1 {
+    	width: 2px;
+    	height: 12px;
+    	background-color: #ddd;
+    	padding: 0;
+    	margin: 14px 8px 0;
+    }
+
+    .bottom-footer-center .space2 {
+    	width: 2px;
+    	height: 12px;
+    	background-color: #ddd;
+    	padding: 0;
+    	margin: 8px 11px 0;
+    }
+
+    .bottom-footer-center span {
+    	display: inline-block;
+    	width: 25px;
+    	height: 25px;
+    	background-image: url(../images/bottom.jpg);
+    	background-position: -858px 4px;
+    }
+
+    .bottom-footer-center li i {
+    	display: block;
+    	margin: -35px 0 0 30px;
+    }
+
+    .bottom-footer-bf {
+    	width: 100%;
+    	height: 90px;
+    	margin-top: 10px;
+    }
+
+    .bottom-footer-bf ul li {
+    	float: left;
+    	margin-right: 27px;
+    }
+
+    .bottom-footer-bf ul span {
+    	display: inline-block;
+    	background: url(../images/bottom.jpg);
+    	height: 37px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(1) span {
+    	width: 37px;
+    	background-image: url(../images/police.gif);
+    }
+
+    .bottom-footer-bf li:nth-of-type(2) span {
+    	width: 37px;
+    	background-position: 0px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(3) span {
+    	width: 40px;
+    	background-position: -38px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(4) span {
+    	width: 52px;
+    	background-position: -80px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(5) span {
+    	width: 85px;
+    	background-position: -139px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(6) span {
+    	width: 100px;
+    	background-position: -237px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(7) span {
+    	width: 87px;
+    	background-position: -344px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(8) span {
+    	width: 222px;
+    	background-position: -429px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(9) span {
+    	width: 110px;
+    	background-position: -647px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(10) span {
+    	width: 100px;
+    	background-position: -758px 1px;
+    }
+
+    .bottom-footer-bf li:nth-of-type(11) span {
+    	width: 250px;
+    	background-position: -883px 1px;
+    }
+
+
+
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1526990067878'); /* IE9*/
+  src: url('iconfont.eot?t=1526990067878#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAkEAAsAAAAADDwAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW72HwY21hcAAAAYAAAABvAAABtpyuBzpnbHlmAAAB8AAABNMAAAWk6To8hGhlYWQAAAbEAAAAMQAAADYRco/kaGhlYQAABvgAAAAgAAAAJAfdA4hobXR4AAAHGAAAABkAAAAcG+n//2xvY2EAAAc0AAAAEAAAABAD/gWMbWF4cAAAB0QAAAAfAAAAIAEWALJuYW1lAAAHZAAAAUUAAAJtPlT+fXBvc3QAAAisAAAAVgAAAG+lAuSbeJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/ss4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVPz/z9zwv4EhhrmJoREozAiSAwA5+w2MeJzFkUEKgDAMBCdWexAhH/Eg+hlPvqMf7jt0G+rBFxiYLtkGWrLABCSxihHswmh1yrXwE3P4Y8xkqTFQqt23+lc1orvcFcv8Vvbf099a4jx71zZSOvpi7ch3tgDt1dmDlopzBC0ZTxYosQe/vw2DAHicXVRNbBtVEH7z9ufZu/Y6+++frO3djXftpF0na6/dNI1dUH/SJkROE9oGpakiVFSqllZcSpSipoiqqKkQx14AgSi9IJUjDZU4cuoBiVQQCVWIHjhxg0tah+ekXNh9b1dvdmZH833fDOIQ2v6decSkkYrKaAQdQh2EgB8CR8IW2H49wEOg25xuahLju75NXCdgxsF0eM0IG3XP5AmfAgnyULPDhh9gH6J6C49BaFgAmVx2Vin1K8wnIKT9/M3ucfwl6AW3P9Xa2z22p62FRTV2NaEoGUW5E+M5LoYxm5LgkmnEubjAd7/iUln9UaGCC5DI+Nmp+WQxpyx9VH/HKplxgNVVUHNF6X5bzsp0XcsaqpIhfclYOpt0BzS4+kxMqwnL+wPRi6G1rjJPmBtIR1k0QOuUNYlNgR9wkdwsJcHn5AqWW1zEbFSnls6ddUVxYOn8uekRD76F77oTXPcBnIS57jf2a5OHG0Vm8MU/1TOnpscrBGNSGZ8+daaKBW5mxoHR7kb3JCkM1scO2ojZ3t5+wCLGRX1oEE3SvGEeaxJ2AkyRUt2mT8zdh17Te7sW1SI3qqnUzQK37rm2w+uyZoxRJmhQJNOwGn7cujI3MjJ35f2LnSDoXPxzcSG44Fy2l/zTndu3b0e3bt0SclVXvZPJvvg4Vy7nNrq/0bOmudUcFqonLq1cnh0enr28culEtfv3fPDmwJ7F+snRveHCQrgXn9GdavZuzhjIda/nvDvpcpjF57NVR6c4cjs4/khx7EclNIY+R/doTXlG362pR38zYNw8Q/4TidqCKnhVIGYeS0B4YjYbTa5R9z16B5gn9OjzhH4yCmBELWhTRe041XZBcQLwvUbTJbyZZ5oGTWA2/R2QIrcFTb9R28FKwjSH0QxbmP4tqhFcPnX3ysGJla+/v78yMTL/3kQ8bSr44Bv7c3+lC4WgWDRFUEsx0XJfESVW8lQjNxfyLPxEGIYTPHn40Px+iYUpQUrYeiqpxhJavCTasp2Jx4eYa9dUQVcw4aFNeB4Lak7zDgS2II77xsULPwgqFNuhXimqWHaLgTgaaF7BuK9k2hZDYpPLn84v3ls5enTl3uL02ruzWmbET4ueX3hmlS26ur+6ddUhMb3uE8W0hlQzXXs7GbdHF2zPyqskwRDRIrxR6E835DgncCCaYp8aqlYuJoy7xzHLCk4CD1gJUxYBEopOypmz7ribyJGYyCa01C9av4aJLTOi4bWS8VeFXo+wPW6pVj9AGVRH+9AByqzDkwAol5QfM99jz0BmAzU9xFBW6o1m1GhDC/w8mEbYbFAXUwKGktakG6P2yr7oLSbWxxKekRlYAA7szU2wOa77dHN9iwsGAWPACX2PIubF81epidt63Ok86XSYVadQyQAhJCVOvS5++MVm9yn3Mvz5JLe1fuzmGMdihp08QgxZFMeB2ta38OHl5eWX/X6d1nKD9l0GHfl/3/WE2ROoSg8RnXOuI7G6ZrR25lctNKicoTfZLNgxYnRhfW1mZm39593XWn+5vK9SWfSqXqZ5ulU9Us2nuMpIhe1zCsOjSr9ckFR/uMysUt+Nh72Qhxs08vln5dFKZbQMhlRqHAuLEwc80x+uVZW0zmaMpGOpUUn13JSV1MlxIQ5C4l+OtQcvAHicY2BkYGAAYnafcM94fpuvDNwsDCBwXUv1M4z+//9/PQsDcxOQy8HABBIFABRDCuUAAAB4nGNgZGBgbvjfwBDDwvD/PwMDCwMDUAQFsAMAdd4EbnicY2FgYGB+ycDAwgDC//9DaAgGADGYAwMAAAAAAAAAAHYAsgEaAggCbgLSeJxjYGRgYGBnWMbAygACTEDMBYQMDP/BfAYAGbAByQB4nGWPTU7DMBCFX/oHpBKqqGCH5AViASj9EatuWFRq911036ZOmyqJI8et1ANwHo7ACTgC3IA78EgnmzaWx9+8eWNPANzgBx6O3y33kT1cMjtyDRe4F65TfxBukF+Em2jjVbhF/U3YxzOmwm10YXmD17hi9oR3YQ8dfAjXcI1P4Tr1L+EG+Vu4iTv8CrfQ8erCPuZeV7iNRy/2x1YvnF6p5UHFockikzm/gple75KFrdLqnGtbxCZTg6BfSVOdaVvdU+zXQ+ciFVmTqgmrOkmMyq3Z6tAFG+fyUa8XiR6EJuVYY/62xgKOcQWFJQ6MMUIYZIjK6Og7VWb0r7FDwl57Vj3N53RbFNT/c4UBAvTPXFO6stJ5Ok+BPV8bUnV0K27LnpQ0kV7NSRKyQl7WtlRC6gE2ZVeOEXpc0Yk/KGdI/wAJWm7IAAAAeJxticEKgCAQBXfNUoQu/eEGa0qhh1USvz6jawMPhjeg4MPBPwYVTqhxxgUNWsC2tUjZc+yBd8o9UDpWX89KyQ+VEF2hPEphYXuP651uIhfAA/EDFxcAAA==') format('woff'),
+  url('iconfont.ttf?t=1526990067878') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1526990067878#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiaofeizhebaozhang:before { content: "\f0030"; }
+
+.icon-fukuanfangshi:before { content: "\f0032"; }
+
+.icon-taobaotese:before { content: "\f0033"; }
+
+.icon-wangwang:before { content: "\f0301"; }
+
+.icon-xssl:before { content: "\e501"; }
+
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<div class="top w">
+			<ul class="left">
+			<li class="china">中国大陆<i class="jt"></i></li>
+			<li class="login"><a href="#">亲，请登录</a></li>
+			<li class="register"><a href="#">免费注册</a></li>
+			<li class="moblie"><a href="#">手机逛淘宝</a></li>
+		</ul>
+		<ul class="right">
+			<li>
+				<a href="#">
+					我的淘宝
+					<i class="jt"></i>
+				</a>
+			</li>
+			<li class="shopping">
+				<a href="#">
+					<i></i>
+					购物车
+					<i>0</i>
+					<i class="jt"></i>
+				</a>
+			</li>
+			<li>
+				<a class="my-fav" href="#">
+					<i class="fav"></i>
+					收藏夹
+					<i class="jt"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					商品分类
+				</a>
+				<!-- <span class="space"></span> -->
+			</li>
+			<li class="space"></li>
+			<li>
+				<a href="#">
+					卖家中心
+					<i class="jt"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					联系客服
+					<i class="jt"></i>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i></i>
+					网站导航
+					<i class="jt"></i>
+				</a>
+			</li>
+		</ul>
+		</div>
+	</header>
+
+
+
+	<div class="side-banner">
+		<span class="iconfont icon-wangwang">
+
+		</span>
+		<ul>
+			<li><a href="#">爱逛好货</a></li>
+			<li><a href="#">好店直播</a></li>
+			<li><a href="#">品质特色</a></li>
+			<li><a href="#">实惠热卖</a></li>
+			<li><a href="#">猜你喜欢</a></li>
+			<li><a href="#">
+				<i></i>
+				顶部</a></li>
+			<li><a href="#">反馈</a></li>
+			<li><a href="#">暴恐举报</a></li>
+		</ul>
+	</div>
+
+
+	<div class="shortcut-nav">
+		<div class="shortcut w">
+			<div class="logo">
+				<a href="#">
+					<img src="./images/taobao.png" width="143px">
+				</a>
+			</div>
+			<div class="search">
+				<div class="search-top">
+					<ul>
+						<li class="one"><a href="#">宝贝</a></li>
+						<li class="two"><a href="#">天猫</a></li>
+						<li class="three"><a href="#">店铺</a></li>
+					</ul>
+				</div>
+				<div class="search-center">
+					<input style="text" placeholder=" 自定义手机壳">
+					<i class="camera"></i>
+					<div class="ss">
+						<button>搜索</button>
+					</div>
+				</div>
+				<div class="search-bottom">
+					<ul>
+						<li><a class="one" href="#">狗粮</a></li>
+						<li><a href="#">时尚连衣裙</a></li>
+						<li><a class="two" href="#">电风扇</a></li>
+						<li><a href="#">妈妈装</a></li>
+						<li><a href="#">风扇</a></li>
+						<li><a class="three" href="#">衬衫</a></li>
+						<li><a href="#">新款男鞋</a></li>
+						<li><a href="#">阔腿裤</a></li>
+						<li><a href="#">时尚休闲裤</a></li>
+						<li><a href="#">凉席三件套</a></li>
+						<li><a href="#">男士凉鞋</a></li>
+						<li><a href="#">男短裤</a></li>
+						<li>
+							<a href="#">
+								更多
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="ewm">
+				<span class="x">
+					<i></i>
+				</span>
+				<div class="ew">
+					<span class="moblietb">手机淘宝</span>
+					<span class="imgs"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="nav">
+		<div class="nav-top">
+			<div class="w nav-muen">
+				<div class="nav-top-left">
+				主题市场
+				</div>
+				<div class="nav-top-right">
+					<ul>
+						<li><a href="#">天猫<i></i></a></li>
+						<li><a href="#">聚划算<i></i></a></li>
+						<li><a href="#">天猫超市<i></i></a></li>
+						<li class="space"></li>
+						<li><a href="#">淘抢购<i></i></a></li>
+						<li><a href="#">电器城<i></i></a></li>
+						<li><a href="#">司法拍卖<i></i></a></li>
+						<li><a href="#">中国质造<i></i></a></li>
+						<li><a href="#">兴农扶贫<i></i></a></li>
+						<li class="space"></li>
+						<li><a href="#">飞猪旅行<i></i></a></li>
+						<li><a href="#">智能生活<i></i></a></li>
+						<li><a href="#">苏宁易购<i></i></a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="middle w">
+		<div class="middle-side-nav">
+			<div class="none"></div>
+			<ul>
+				<li><a href="#">女装</a> / </li>
+				<li><a href="#"> 男装</a> / </li>
+				<li><a href="#"> 内衣</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">鞋靴</a> / </li>
+				<li><a href="#"> 箱包</a> / </li>
+				<li><a href="#"> 配件</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">童装玩具</a> / </li>
+				<li><a href="#"> 孕产</a> / </li>
+				<li><a href="#"> 用品</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">家电</a> / </li>
+				<li><a href="#"> 数码</a> / </li>
+				<li><a href="#"> 手机</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">美妆</a> / </li>
+				<li><a href="#"> 洗护</a> / </li>
+				<li><a href="#"> 保健品</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">珠宝</a> / </li>
+				<li><a href="#"> 眼镜</a> / </li>
+				<li><a href="#"> 手表</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">运动</a> / </li>
+				<li><a href="#"> 户外</a> / </li>
+				<li><a href="#"> 乐器</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">游戏</a> / </li>
+				<li><a href="#"> 动漫</a> / </li>
+				<li><a href="#"> 影视</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">美食</a> / </li>
+				<li><a href="#"> 生鲜</a> / </li>
+				<li><a href="#"> 零食</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">鲜花</a> / </li>
+				<li><a href="#"> 宠物</a> / </li>
+				<li><a href="#"> 农资</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">房产</a> / </li>
+				<li><a href="#"> 装修</a> / </li>
+				<li><a href="#"> 建材</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">家具</a> / </li>
+				<li><a href="#"> 家饰</a> / </li>
+				<li><a href="#"> 家纺</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">汽车</a> / </li>
+				<li><a href="#"> 二手车</a> / </li>
+				<li><a href="#"> 用品</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">办公</a> / </li>
+				<li><a href="#"> DIY</a> / </li>
+				<li><a href="#"> 五金电子</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">百货</a> / </li>
+				<li><a href="#"> 餐厨</a> / </li>
+				<li><a href="#"> 家庭保健</a></li>
+				<li class="ctrl"></li>
+			</ul>
+			<ul>
+				<li><a href="#">学习</a> / </li>
+				<li><a href="#"> 卡券</a> / </li>
+				<li><a href="#"> 本地服务</a></li>
+				<li class="ctrl"></li>
+			</ul>
+		</div>
+		<div class="middle-center">
+			<div class="middle-center-top">
+				<div class="imgs">
+					<button class="ctrl-jt">
+						<i></i>
+					</button>
+					<button class="ctrl-jt">
+						<i></i>
+					</button>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<div class="side">
+
+				</div>
+			</div>
+			<div class="middle-center-middle">
+				<div class="middle-center-middle-left">
+					<div class="top">
+						<img src="./images/tianmao.png">
+						<span>理想生活上天猫</span>
+						<span class="space"></span>
+						<span class="six">
+							<i>1</i>/6
+						</span>
+					</div>
+					<div class="bottom">
+						<div class="imgs">
+							<div class="one-imgs"></div>
+							<div class="two-imgs"></div>
+						</div>
+						<button class="ctrl-jt">
+							<i></i>
+						</button>
+						<button class="ctrl-jt">
+							<i></i>
+						</button>
+					</div>
+				</div>
+				<div class="middle-center-middle-right">
+					<div class="hot">
+						今日热卖
+					</div>
+					<div class="bottom-imgs">
+					</div>
+				</div>
+			</div>
+			<div class="middle-center-bottom">
+				<div class="middle-center-bottom-left">
+					<img src="./images/hottop.png">
+					<span>让你的生活更有趣</span>
+				</div>
+				<div class="middle-center-bottom-right">
+					<a href="#">
+						<img src="./images/phone.webp">
+						<h4>【5.19早报】 小米8或将支持屏下指纹？</h4>
+						<p>今日品玩早报内容包含：OPPO 将要推出 R15 星云特别版；荣耀畅玩 7 低调销售，仅售 599 元；海信发布一款价格非常便宜的 80 英寸激光电视。</p>
+					</a>
+					<a href="#" class="more">
+						更多<i></i>
+					</a>
+
+				</div>
+			</div>
+		</div>
+		<div class="middle-right">
+			<div class="login">
+				<div class="imgs">
+					<span class="circle"></span>
+					<span class="hi">Hi!你好</span>
+					<div class="money">
+						<a href="#">
+							<span class="many one"></span>
+							<i>领淘金币抵钱</i>
+						</a>
+						<a href="#">
+							<span class="many two"></span>
+							<i>会员俱乐部</i>
+						</a>
+					</div>
+				</div>
+				<div class="butt">
+					<button>登录</button>
+					<button>注册</button>
+					<button>开店</button>
+				</div>
+			</div>
+			<div class="harmful">
+				<a href="#">
+					网上有有害信息举报专区
+					<i></i>
+				</a>
+			</div>
+			<div class="security">
+				<div class="gg">
+					<ul>
+						<li>公告</li>
+						<li>规则</li>
+						<li>论坛</li>
+						<li>安全</li>
+						<li>公益</li>
+					</ul>
+				</div>
+				<div class="xx">
+					<ul class="nav">
+						<li class="one"><a href="#">阿里CEO张勇:淘宝越来越年轻 	是宏大梦想的镜子</a></li>
+						<li class="two"><a href="#">淘宝加大扶持特色市场</a></li>
+						<li class="three"><a href="#">汶川樱桃搭村淘卖全国</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="trip">
+				<ul>
+					<li>
+						<a href="#">
+							<span class="one"></span>
+							<p>充话费</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="two"></span>
+							<p>旅行</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="three"></span>
+							<p>车险</p>
+						</a>
+					</li>
+					<li class="last">
+						<a href="#">
+							<span class="four"></span>
+							<p>游戏</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="five"></span>
+							<p>彩票</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="six"></span>
+							<p>电影</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="seven"></span>
+							<p>酒店</p>
+						</a>
+					</li>
+					<li class="last">
+						<a href="#">
+							<span class="eight"></span>
+							<p>理财</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="nine"></span>
+							<p>找服务</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="ten"></span>
+							<p>演出</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="eleven"></span>
+							<p>水电煤</p>
+						</a>
+					</li>
+					<li class="last">
+						<a href="#">
+							<span class="twelve"></span>
+							<p>火车票</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="alapp">
+				<div class="al">
+					<span class="app">
+						阿里APP
+					</span>
+					<a class="more">
+						更多<i></i>
+					</a>
+				</div>
+				<div class="img-tb">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="./images/taobao.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/tianmao.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/ju.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/zhifubao.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/wangwang.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/mayi.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/taopp.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/xiami.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/tudou.webp" width="36px" height="36px">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="./images/youku.webp" width="36px" height="36px">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<div class="life w">
+		<div class="word">
+			<img title="人群研究所" src="./images/life.png" height="23px">
+			<span>发现属于你的生活方式</span>
+		</div>
+		<div class="life-imgs">
+			<ul>
+				<li>
+					<a href="#">
+						<span>
+							<img src="./images/shoe.webp" />
+						</span>
+						<h4>极简主义</h4>
+						<p>让生活更简单</p>
+						<p>
+							<i></i>
+							人气26728
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<img src="./images/girl.webp" />
+						</span>
+						<h4>女神范</h4>
+						<p>就是要你好看</p>
+						<p>
+							<i></i>
+							人气4091370
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<img src="./images/girl1.webp" />
+						</span>
+						<h4>就爱宽松感</h4>
+						<p>不骨感才性感</p>
+						<p>
+							<i></i>
+							人气3060563
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<img src="./images/child.webp" />
+						</span>
+						<h4>家有萌娃</h4>
+						<p>宝贝快快长大</p>
+						<p>
+							<i></i>
+							人气1768834
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<img src="./images/girl3.webp" />
+						</span>
+						<h4>时髦小妖精</h4>
+						<p>实力撩获欧巴</p>
+						<p>
+							<i></i>
+							人气1271473
+						</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span>
+							<img src="./images/shirt.webp" />
+						</span>
+						<h4>帅气BF风</h4>
+						<p>做自己的男友</p>
+						<p>
+							<i></i>
+							人气598051
+						</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="good-goods w">
+		<div class="good-goods-left">
+			<div class="acenter">
+				<div class="good-goods-left-top">
+					<img src="./images/good.png" height="27px">
+					<span class="word">
+						<i></i>
+						<span>与品质生活不期而遇</span>
+					</span>
+					<a href="#">换一换</a>
+				</div>
+				<div class="good-imgs">
+					<ul>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/clothe1.webp">
+								<h4>Vetements连帽卫衣</h4>
+								<p>紧实修身剪裁，墨绿配色，配上德语城市名字母印花，时尚亮眼。</p>
+								<p>
+									<i></i>
+									0 人说好
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/clothe2.webp">
+								<h4>RIXO LONDON 印花真丝裙</h4>
+								<p>别出心裁的下摆开叉设计，露出腿部风情。</p>
+								<p>
+									<i></i>
+									0 人说好
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/clothe3.webp">
+								<h4>Degaia刺绣西裤</h4>
+								<p>经典休闲版型加之精致刺绣徽章呈现，儒雅庄重不失活力。</p>
+								<p>
+									<i></i>
+									6 人说好
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/clothe4.webp">
+								<h4>Bottega Veneta牛皮包</h4>
+								<p>精致的编织工艺，细节感满满。</p>
+								<p>
+									<i></i>
+									3 人说好
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/clothe5.webp">
+								<h4>Gucci 狼头印花连帽卫衣</h4>
+								<p>个性狼头印花点缀胸前，增添男士狼性魅力。</p>
+								<p>
+									<i></i>
+									0 人说好
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/clothe6.webp">
+								<h4>Givenchy印花双肩包</h4>
+								<p>青春减龄的双肩包设计，绽放青春活力。</p>
+								<p>
+									<i></i>
+									0 人说好
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="good-goods-right">
+			<div class="acenter">
+				<div class="good-goods-right-top">
+					<img src="./images/shopping.png" height="24px">
+					<span class="word">
+						<span>与品质生活不期而遇</span>
+					</span>
+					<a href="#">更多<i></i></a>
+				</div>
+				<div class="good-imgs">
+					<ul>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/life1.webp">
+								<!-- <h4>Vetements连帽卫衣</h4> -->
+
+								<p class="hov"><i></i>喜临门4D磁悬浮乳胶棕床垫+1.8m*2米玛格丽特皮床+1个床头柜套餐</p>
+								<p class="ag1">
+									<img src="./images/tx1.jpg">
+									<strong>爱逛***01</strong>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/life2.webp">
+								<p class="hov"><i></i>日本进口 雪印奶球奶精 星巴克咖啡伴侣 不含反式脂肪 50个原装</p>
+								<p class="ag1">
+									<img src="./images/tx2.jpg">
+									<strong>潮范时光机</strong>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/life3.webp">
+								<p class="hov"><i></i>陶瓷装饰盘子摆盘欧式家居装饰挂盘墙壁挂盘创意玄关观赏手绘坐盘</p>
+								<p class="ag1">
+									<img src="./images/tx2.jpg">
+									<strong>潮范时光机</strong>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/life4.webp">
+								<p class="hov"><i></i>特尔博波音B747合金客机商飞c919飞机模型玩具南航B787 777 737</p>
+								<p class="ag1">
+									<img src="./images/tx3.jpg">
+									<strong>潮流女孩girl</strong>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/life5.webp">
+								<p class="hov"><i></i>客厅沙发背景墙装饰画欧式油画 玄关餐厅挂画 美式风景画 落基山</p>
+								<p class="ag1">
+									<img src="./images/tx4.jpg">
+									<strong>爱放飞自我的兔小姐</strong>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span></span>
+								<img src="./images/life1.webp">
+								<p class="hov"><i></i>99朵红玫瑰花束521送花唐山天津鲜花速递长沙同城石家庄长春花店</p>
+								<p class="ag1">
+									<img src="./images/tx2.jpg">
+									<strong>潮范时光机</strong>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="tqg w">
+		<div class="tqg-top">
+			<a href="#">
+				<img src="./images/tqg.png" height="24px">
+			</a>
+			<i>距结束</i>
+			<span class="all">
+				<span>00</span>
+				<span>:</span>
+				<span>27</span>
+				<span>:</span>
+				<span>05</span>
+			</span>
+
+			<span class="more">
+				<span>换一换</span>
+				<span>
+					更多
+					<i></i>
+				</span>
+			</span>
+		</div>
+		<class class="tqg-bottom">
+			<ul>
+				<li>
+					<a href="#">
+						<span class="tran"></span>
+						<img src="./images/tqg.webp">
+						<span class="info">
+							<h4>高品质纯棉短袖t恤/情侣款可选</h4>
+							<p>前60分钟 领券1件29</p>
+							<span class="oneh">
+								<span class="fifty"></span>
+							</span>
+							<span class="jd">
+								<p>15%</p>
+								<p>已抢911件</p>
+							</span>
+							<span class="del">
+								<span>￥49</span>
+								<del>￥299.00</del>
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="tran"></span>
+						<img src="./images/tqg1.webp">
+						<span class="info">
+							<h4>蜜丝佛陀透滑粉饼美白保湿遮瑕</h4>
+							<p>领券下单立减5元</p>
+							<span class="oneh">
+								<span class="fifty"></span>
+							</span>
+							<span class="jd">
+								<p>8%</p>
+								<p>已抢40件</p>
+							</span>
+							<span class="del">
+								<span>￥99</span>
+								<del>￥178.00</del>
+							</span>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="tran"></span>
+						<img src="./images/tqg2.webp">
+						<span class="info">
+							<h4>8848 M3颠峰版直降10000元起</h4>
+							<p>直降10000元起</p>
+							<span class="oneh">
+								<span class="fifty"></span>
+							</span>
+							<span class="jd">
+								<p>23%</p>
+								<p>已抢18件</p>
+							</span>
+							<span class="del">
+								<span>￥5999</span>
+								<del>￥15999.00</del>
+							</span>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</class>
+	</div>
+
+
+	<div class="banner w">
+		<a href="#">
+			<img src="./images/eye.jpg">
+		</a>
+	</div>
+
+
+
+	<div class="good-day w">
+		<div class="good-day-left">
+			<div class="good-day-left-top">
+				<a href="#">
+					<img src="./images/good_store.png" height="24px">
+				</a>
+				<span>发现深藏的好店</span>
+				<a class="more" href="#">
+					更多
+					<i></i>
+				</a>
+			</div>
+			<div class="good-day-left-center">
+				<a href="#" class="tuijian">
+					<span class="word">
+						<h4>今日推荐</h4>
+						<i>暂无店铺评价</i>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+				<a href="#" class="ns">
+					<span class="word">
+						<h4>女神の店</h4>
+						<i>暂无店铺评价</i>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+			</div>
+			<div class="good-day-left-bottom">
+				<a href="#" class="tuijian">
+					<span class="word">
+						<h4>男人帮</h4>
+						<i>暂无店铺评价</i>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+				<a href="#" class="ns">
+					<span class="word">
+						<h4>有腔调</h4>
+						<i>暂无店铺评价</i>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+			</div>
+		</div>
+		<div class="good-day-right">
+			<div class="good-day-right-top">
+				<a href="#">
+					<img src="./images/taobaozb.png" height="21px">
+				</a>
+				<span>你的爱豆直播等你哟！</span>
+				</a>
+			</div>
+			<div class="good-day-left-center">
+				<a href="#" class="tuijian">
+					<span class="word">
+						<h4>我和金星一样但</h4>
+						<i>24467观看</i>
+					</span>
+					<span class="live">
+						<span class="new">
+							<i>LIVE</i>
+							<i></i>
+						</span>
+						<strong>护肤你了解多少？</strong>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one">
+						</span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one">
+						</span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+				<a href="#" class="ns">
+					<span class="word">
+						<h4>小猪猪茉莉花</h4>
+						<i>23445观看</i>
+					</span>
+					<span class="live">
+						<span class="new">
+							<i>LIVE</i>
+							<i></i>
+						</span>
+						<strong>现场选美衣一手货直发</strong>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+			</div>
+			<div class="good-day-left-bottom">
+				<a href="#" class="tuijian">
+					<span class="word">
+						<h4>金金金酱poy</h4>
+						<i>291观看</i>
+					</span>
+					<span class="live posi">
+						<span class="new">
+							<i>LIVE</i>
+							<i></i>
+						</span>
+						<strong>手残党的神奇撸妆技巧</strong>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+				<a href="#" class="ns">
+					<span class="word">
+						<h4>悠悠我型</h4>
+						<i>3251观看</i>
+					</span>
+					<span class="live posi">
+						<span class="new">
+							<i>LIVE</i>
+							<i></i>
+						</span>
+						<strong>小个子盛夏美衣来袭</strong>
+					</span>
+					<div class="imgs-tuijian">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+					<div class="tuijian1">
+						<span class="one"></span>
+						<span class="two"></span>
+						<span class="three"></span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="fashion w">
+		<div class="fashion-left">
+			<div class="fashion-left-top">
+				<span></span>
+				<h3>时尚爆料王</h3>
+			</div>
+			<div class="fashion-left-bottom">
+				<div class="fashion-left-bottom-info">
+					<div class="info">
+						<a href="#">腔调</a>
+						<p>全球创意设计师平台</p>
+					</div>
+					<div class="imgs">
+						<a href="#">
+							<img src="./images/fashion_clothe1.webp">
+						</a>
+						<a href="#">
+							<img src="./images/fashion_clothe2.webp">
+						</a>
+					</div>
+				</div>
+				<div class="fashion-left-bottom-info">
+					<div class="info">
+						<a href="#">全球购</a>
+						<p>探索全球美好生活</p>
+					</div>
+					<div class="imgs">
+						<a href="#">
+							<img src="./images/fashion_clothe3.webp">
+						</a>
+						<a href="#">
+							<img src="./images/fashion_clothe4.webp">
+						</a>
+					</div>
+				</div>
+				<div class="fashion-left-bottom-info">
+					<div class="info">
+						<a href="#">魅力惠</a>
+						<p>奢品好物立即购</p>
+					</div>
+					<div class="imgs">
+						<a href="#">
+							<img src="./images/fashion_clothe5.webp">
+						</a>
+						<a href="#">
+							<img src="./images/fashion_clothe6.webp">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fashion-right">
+			<a href="#"><img src="./images/ttl.jpg"></a>
+
+		</div>
+	</div>
+
+
+
+	<div class="pz-ts w">
+		<div class="pz-ts-left">
+			<div class="pz-ts-top">
+				<span></span>
+				<h3>品质生活家</h3>
+			</div>
+			<div class="pz-ts-bottom">
+				<div class="pz-ts-bottom-left">
+					<div class="pz-ts-bottom-left-one">
+						<a href="#">
+							<img src="./images/home1.png">
+							<span class="mb"></span>
+						</a>
+
+					</div>
+					<div class="pz-ts-bottom-left-two">
+						<a href="#">
+							<h4>极有家</h4>
+							<p>过我想要的生活</p>
+							<img src="./images/home2.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-left-three">
+						<a href="#">
+							<h4>淘宝花鸟</h4>
+							<p>园艺宠物爱好者集中营</p>
+							<img src="./images/home3.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-left-four">
+						<a href="#">
+							<h4>聚名品</h4>
+							<p>甄选大牌尖货</p>
+							<img src="./images/home4.webp">
+						</a>
+					</div>
+				</div>
+				<div class="pz-ts-bottom-right">
+					<div class="pz-ts-bottom-right-one">
+						<a href="#">
+							<h4>亲宝贝</h4>
+							<p>享受育儿新方式</p>
+							<img src="./images/home5.webp">
+							<img src="./images/home5_1.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-right-two">
+						<a href="#">
+							<h4>淘宝教育</h4>
+							<p>给你未来的学习体验</p>
+							<img src="./images/home6.webp">
+							<img src="./images/home6_1.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-right-three">
+						<a href="#">
+							<h4>特色中国</h4>
+							<p>地道才够味</p>
+							<img src="./images/home7.webp">
+							<img src="./images/home7_1.webp">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="pz-ts-right">
+			<div class="pz-ts-top">
+				<span></span>
+				<h3>特色玩味控</h3>
+			</div>
+			<div class="pz-ts-bottom">
+				<div class="pz-ts-bottom-left">
+					<div class="pz-ts-bottom-left-one">
+						<a href="#">
+							<img src="./images/hot1.jpg">
+							<span class="mb"></span>
+						</a>
+
+					</div>
+					<div class="pz-ts-bottom-left-two">
+						<a href="#">
+							<h4>淘宝众筹</h4>
+							<p>脑洞创意坊</p>
+							<img src="./images/hot2.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-left-three">
+						<a href="#">
+							<h4>中国质造</h4>
+							<p>懂得好生活</p>
+							<img src="./images/hot3.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-left-four">
+						<a href="#">
+							<h4>阿里汽车</h4>
+							<p>冰点低价</p>
+							<img src="./images/hot4.webp">
+						</a>
+					</div>
+				</div>
+				<div class="pz-ts-bottom-right">
+					<div class="pz-ts-bottom-right-one">
+						<a href="#">
+							<h4>淘宝动漫</h4>
+							<p>童年经典美漫经典</p>
+							<img src="./images/hot5.webp">
+							<img src="./images/hot5_1.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-right-two">
+						<a href="#">
+							<h4>淘宝文创</h4>
+							<p>潮流文创聚集地</p>
+							<img src="./images/hot6.webp">
+							<img src="./images/hot6_1.webp">
+						</a>
+					</div>
+					<div class="pz-ts-bottom-right-three">
+						<a href="#">
+							<h4>淘宝电场</h4>
+							<p>科技潮玩看我</p>
+							<img src="./images/hot7.webp">
+							<img src="./images/hot7_1.webp">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="affordable w">
+		<div class="affordable-top">
+			<span></span>
+			<h3>实惠专业户</h3>
+		</div>
+		<div class="affordable-bottom">
+			<div class="all">
+				<h4>
+					<a href="#">天天特价</a>
+				</h4>
+				<div class="clothes">
+					<img src="./images/affordable1.webp" height="120px">
+					<p>优惠好货</p>
+					<p>特价专区</p>
+					<p>
+						<a href="#">全场包邮</a>
+					</p>
+				</div>
+			</div>
+			<div class="all">
+				<h4>
+					<a href="#">淘金币</a>
+				</h4>
+				<div class="clothes">
+					<img src="./images/affordable2.webp" height="120px">
+					<p>异域风味</p>
+					<p>台湾美食</p>
+					<p>
+						<a href="#">签到领金币</a>
+					</p>
+				</div>
+			</div>
+			<div class="all">
+				<h4>
+					<a href="#">量贩团</a>
+				</h4>
+				<div class="clothes">
+					<img src="./images/affordable3.webp" height="120px">
+					<p>大包装囤货</p>
+					<p>超值付邮领</p>
+					<p>
+						<a href="#">0.01元疯抢</a>
+					</p>
+				</div>
+			</div>
+			<div class="all">
+				<h4>
+					<a href="#">0.01元疯抢</a>
+				</h4>
+				<div class="clothes">
+					<img src="./images/affordable4.webp" height="120px">
+					<p>免息购大牌</p>
+					<p>臻选尖货</p>
+					<p>
+						<a href="#">365天超低价</a>
+					</p>
+				</div>
+			</div>
+			<div class="all last">
+				<h4>
+					<a href="#">阿里试用</a>
+				</h4>
+				<div class="clothes">
+					<img src="./images/affordable5.webp" height="120px">
+					<p>0元免费试</p>
+					<p>大牌新品</p>
+					<p>
+						<a href="#">先用后买</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="hot-single w">
+		<div class="hot-single-top">
+			<div class="hot-single-top-top">
+				<span></span>
+				<h3>热卖单品</h3>
+			</div>
+			<div class="hot-single-top-bottom">
+				<ul>
+					<li><a href="#">拖鞋</a></li>
+					<li><a href="#">床垫</a></li>
+					<li><a href="#">浴室柜</a></li>
+					<li><a href="#">客厅灯</a></li>
+					<li><a href="#">沙发</a></li>
+					<li><a href="#">拉杆箱</a></li>
+					<li><a href="#">粽子</a></li>
+					<li><a href="#">窗帘</a></li>
+					<li><a href="#">电脑椅</a></li>
+					<li><a href="#">皮带</a></li>
+					<li><a href="#">茶几</a></li>
+					<li><a href="#">鞋柜</a></li>
+					<li><a href="#">椅子</a></li>
+					<li><a href="#">男内裤</a></li>
+					<li><a href="#">衣柜</a></li>
+					<li><a href="#">蚊帐</a></li>
+					<li><a href="#">电脑桌</a></li>
+					<li><a href="#">电风扇</a></li>
+					<li><a href="#">凉席</a></li>
+					<li><a href="#">文胸</a></li>
+					<li><a href="#">男包</a></li>
+					<li><a href="#">牛仔裤</a></li>
+					<li><a href="#">面膜</a></li>
+					<li><a href="#">防晒衣</a></li>
+					<li><a href="#">风扇</a></li>
+				</ul>
+				<img src="./images/ad.png" height="16px">
+			</div>
+		</div>
+		<div class="hot-single-info">
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single1.webp" width="200px">
+				</a>
+				<a href="#" class="line-1">
+					<img src="./images/baoyou.png" height="17px">
+					<h4>老人头凉鞋男士2018夏季新款真皮透气包头镂</h4>
+				</a>
+				<div class="line-2">
+					<a href="#">
+						评价
+						<em>0</em>
+					</a>
+					<a href="#">
+						收藏
+						<em>582</em>
+					</a>
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>188</span>
+						<del>￥888</del>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>410</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single2.webp" width="200px" height="197px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>摩登舞裙连衣裙新 华尔兹探戈国标舞演出服</h4>
+				</a>
+				<div class="line-2">
+					<a href="#">
+						评价
+						<em>0</em>
+					</a>
+					<a href="#">
+						收藏
+						<em>14</em>
+					</a>
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>1080</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>0</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single3.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>连衣裙 薄利多销	 Duang！幸福的一天从“淘宝”开始~</h4>
+				</a>
+				<div class="line-2">
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>8900</span>
+						<!-- <del>￥888</del> -->
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>3595</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single4.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>毛呢外套 女 爆品促销	 天下好货我这全有</h4>
+				</a>
+				<div class="line-2">
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>23400</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>680</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single5.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>男外套 爆品大搜罗 你猜我猜不猜中你想买这些……</h4>
+				</a>
+				<div class="line-2">
+
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>6900</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>876</em>
+						笔
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="hot-single-info">
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single6.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>电器 本月最低价	 当然是点我看看有啥好玩意儿啦~</h4>
+				</a>
+				<div class="line-2">
+
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>49900</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>2262</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single7.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>风衣 女 必备品 要有钱先省钱，支招看这里</h4>
+				</a>
+				<div class="line-2">
+
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>25300</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>135</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single8.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>大码女装秋 冰点特价	 看看好东西可以点亮精神头哦！</h4>
+				</a>
+				<div class="line-2">
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>7200</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>2456</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single9.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>床上用品 超优惠	 你喜欢的，快来快来嘛</h4>
+				</a>
+				<div class="line-2">
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>19900</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>179</em>
+						笔
+					</a>
+				</div>
+			</div>
+			<div class="hot-single-info-all">
+				<a href="#">
+					<img src="./images/hot_single10.webp" width="200px">
+				</a>
+				<a href="#" class="line-1 posi">
+					<h4>女牛仔裤 冲量特价	 我能猜中你喜欢的是这些</h4>
+				</a>
+				<div class="line-2">
+
+				</div>
+				<div class="line-3">
+					<a href="#">￥
+						<span>16200</span>
+					</a>
+					<a class="month" href="#">
+						月销
+						<em>3542</em>
+						笔
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="hot-single-bottom">
+			<a href="#">
+				<img src="./images/cheap1.jpg">
+			</a>
+			<a href="#">
+				<img src="./images/cheap2.jpg">
+			</a>
+			<a href="#">
+				<img src="./images/cheap3.jpg">
+			</a>
+		</div>
+	</div>
+
+
+	<div class="favorite w">
+		<div class="favorite-top">
+			<span></span>
+			<h3>猜你喜欢</h3>
+		</div>
+		<div class="favorite-info">
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite1.webp">
+					<span></span>
+				</a>
+				<a href="#">德加家具 地中海白橡木全实木餐桌组合 美式英伦象牙白 一桌四椅</a>
+				<a href="#">
+					<em>￥</em>
+					2199
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+
+
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite2.webp">
+					<span></span>
+				</a>
+				<a href="#">SURE 400W TAMP单声道纯后级音频数字成品板功放发烧级车载低音炮</a>
+				<a href="#">
+					<em>￥</em>
+					314
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite3.webp">
+					<span></span>
+				</a>
+				<a href="#">DELL/戴尔 D6000 坞站 扩展坞 Thunderblot3 Type-C USB3.0</a>
+				<a href="#">
+					<em>￥</em>
+					1020
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite4.webp">
+					<span></span>
+				</a>
+				<a href="#">瘦脸神器24k色黄金电动美容棒脸部V脸按摩器</a>
+				<a href="#">
+					<img class="borradiu"src="./images/hot.png" >
+					<em>￥</em>
+					49.9
+					<span class="sales">销量:18417</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite5.webp">
+					<span></span>
+				</a>
+				<a href="#">斯兰诺美式乡村小户型餐桌椅组合地中海长方形餐桌家用餐台</a>
+				<a href="#">
+					<em>￥</em>
+					4399
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="favorite-info">
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite2_1.webp">
+					<span></span>
+				</a>
+				<a href="#">喜得居实木餐桌椅组合大理石餐台</a>
+				<a href="#">
+					<em>￥</em>
+					3960
+					<span class="sales">销量:1</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite2_2.webp">
+					<span></span>
+				</a>
+				<a href="#">南海鸿崴 欧式家具餐厅餐桌法式田园木面方桌大理石桌子餐椅子</a>
+				<a href="#">
+					<em>￥</em>
+					1900
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite2_3.webp">
+					<span></span>
+				</a>
+				<a href="#">美菲莱现代北欧实木餐桌圆桌大小户型餐桌椅组合圆形曲木餐桌家具</a>
+				<a href="#">
+					<em>￥</em>
+					3799
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite2_4.webp">
+					<span></span>
+				</a>
+				<a href="#">提升紧致 祛法令纹双下巴 瘦咬肌瘦脸面罩</a>
+				<a href="#">
+					<img class="borradiu"src="./images/hot.png" >
+					<em>￥</em>
+					108
+					<span class="sales">销量:29</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite2_5.webp">
+					<span></span>
+				</a>
+				<a href="#">北欧圆餐桌大理石6人金色不锈钢圆形餐台现代简约设计师八仙桌子</a>
+				<a href="#">
+					<em>￥</em>
+					2800
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="favorite-info">
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite3_1.webp">
+					<span></span>
+				</a>
+				<a href="#">上点餐厅家具 法式双层圆餐台 欧式餐桌椅组合 白色田园吃饭桌</a>
+				<a href="#">
+					<em>￥</em>
+					2558
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite3_2.webp">
+					<span></span>
+				</a>
+				<a href="#">美菲莱现代北欧实木餐桌圆桌大小户型餐桌椅组合圆形餐桌客厅家具</a>
+				<a href="#">
+					<em>￥</em>
+					3250
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite3_3.webp">
+					<span></span>
+				</a>
+				<a href="#">YJ00252-TDA7498(100W+100W)功放板</a>
+				<a href="#">
+					<em>￥</em>
+					168
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite3_4.webp">
+					<span></span>
+				</a>
+				<a href="#">韩国瘦脸贴神器瘦咬肌v脸绷带 瘦脸仪面膜</a>
+				<a href="#">
+					<img class="borradiu"src="./images/hot.png" >
+					<em>￥</em>
+					29.9
+					<span class="sales">销量:2385</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite3_5.webp" height="200px" width="200px">
+					<span></span>
+				</a>
+				<a href="#">外置光驱DVD移动CD刻录机笔记本外接光驱拉丝适于 三星300E5K</a>
+				<a href="#">
+					<em>￥</em>
+					139
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="favorite-info">
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite4_1.webp">
+					<span></span>
+				</a>
+				<a href="#">斯兰诺美式圆餐桌椅组合现代简约小户型饭桌田园风格吃饭木桌子</a>
+				<a href="#">
+					<em>￥</em>
+					2599
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite4_2.webp">
+					<span></span>
+				</a>
+				<a href="#">喜得居灰洞石大理石圆形餐厅桌椅子组合黑檀实木饭桌中式简约家具</a>
+				<a href="#">
+					<em>￥</em>
+					2200
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite4_3.webp">
+					<span></span>
+				</a>
+				<a href="#">千品雅家具北欧餐桌椅组合现代简约小户型饭桌子餐厅实木家具</a>
+				<a href="#">
+					<em>￥</em>
+					1780
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite4_4.webp">
+					<span></span>
+				</a>
+				<a href="#">微电流美容仪脸部按摩器家用瘦脸神器滚轮棒</a>
+				<a href="#">
+					<img class="borradiu"src="./images/hot.png" >
+					<em>￥</em>
+					298
+					<span class="sales">销量:222</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite4_5.webp" height="200px" width="200px">
+					<span></span>
+				</a>
+				<a href="#">酷豪 实木圆餐桌小美式餐桌椅组合大户型白色欧式餐厅家具8801</a>
+				<a href="#">
+					<em>￥</em>
+					1680
+					<span class="sales">销量:1</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="favorite-info">
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite5_1.webp">
+					<span></span>
+				</a>
+				<a href="#">欧式餐桌椅组合现代简约大理石实木饭桌 小户型长方形简欧家用6人</a>
+				<a href="#">
+					<em>￥</em>
+					1358
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite5_2.webp">
+					<span></span>
+				</a>
+				<a href="#">北欧长方形可伸缩实木饭桌桌子折叠钢化玻璃餐桌椅组合 现代简约</a>
+				<a href="#">
+					<em>￥</em>
+					1199
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite5_3.webp">
+					<span></span>
+				</a>
+				<a href="#">美菲莱北欧纯实木餐桌椅组合白蜡木环保家具现代简约一桌四椅饭桌</a>
+				<a href="#">
+					<em>￥</em>
+					3240
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite5_4.webp">
+					<span></span>
+				</a>
+				<a href="#">新铂金微电流瘦脸神器棒滚轮式脸部按摩器</a>
+				<a href="#">
+					<img class="borradiu"src="./images/hot.png" >
+					<em>￥</em>
+					298
+					<span class="sales">销量:41</span>
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+			<div class="favorite-info-all">
+				<a href="#" class="mb"><img src="./images/favorite5_5.webp" height="200px" width="200px">
+					<span></span>
+				</a>
+				<a href="#">YJ00141-USB  光纤 同轴三合一（经济型）解码板</a>
+				<a href="#">
+					<em>￥</em>
+					108
+				</a>
+				<div class="favorite-info-hover">
+					<a class="similiar" href="#">
+						<i></i>
+						找相似
+					</a>
+					<span></span>
+					<a class="bb" href="#">
+						发现更多相似的宝贝<i></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="footer w">
+		<div class="end">
+			<span class="space"></span>
+			<i>END</i>
+			<span class="space"></span>
+		</div>
+		<div class="xfz">
+			<i class="iconfont icon-xiaofeizhebaozhang"></i>
+			<span>消费者保障</span>
+			<ul>
+				<li><a href="#">保障范围</a></li>
+				<li><a href="#">退货退款流程</a></li>
+				<li><a href="#">服务中心</a></li>
+				<li><a href="#">更多特色服务</a></li>
+			</ul>
+		</div>
+		<div class="new">
+			<i class="iconfont icon-xssl"></i>
+			<span>新手上路</span>
+			<ul>
+				<li><a href="#">新手专区</a></li>
+				<li><a href="#">消费警示</a></li>
+				<li><a href="#">交易安全</a></li>
+				<li><a href="#">24小时在线帮助</a></li>
+				<li><a href="#">免费开店</a></li>
+			</ul>
+		</div>
+		<div class="style">
+			<i class="iconfont icon-fukuanfangshi"></i>
+			<span>付款方式</span>
+			<ul>
+				<li><a href="#">快捷支付</a></li>
+				<li><a href="#">信用卡</a></li>
+				<li><a href="#">余额宝</a></li>
+				<li><a href="#">蚂蚁花呗</a></li>
+				<li><a href="#">货到付款</a></li>
+			</ul>
+		</div>
+		<div class="special">
+			<i class="iconfont icon-taobaotese"></i>
+			<span>淘宝特色</span>
+			<ul>
+				<li><a href="#">手机淘宝</a></li>
+				<li><a href="#">旺旺/旺信</a></li>
+				<li><a href="#">大众评审</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="bottom-footer">
+		<div class="bottom-footer-all w">
+			<div class="bottom-footer-top">
+				<ul>
+					<li><a href="#">阿里巴巴集团</a></li>
+					<li class="space"></li>
+					<li><a href="#">淘宝网</a></li>
+					<li class="space"></li>
+					<li><a href="#">天猫</a></li>
+					<li class="space"></li>
+					<li><a href="#">聚划算</a></li>
+					<li class="space"></li>
+					<li><a href="#">全球速卖通</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里巴巴国际交易市场</a></li>
+					<li class="space"></li>
+					<li><a href="#">1688</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里妈妈</a></li>
+					<li class="space"></li>
+					<li><a href="#">飞猪</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里云计算</a></li>
+					<li class="space"></li>
+					<li><a href="#">AliOS</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里通信</a></li>
+					<li class="space"></li>
+					<li><a href="#">一淘</a></li>
+					<li class="space"></li>
+					<li><a href="#">万网</a></li>
+					<li class="space"></li>
+					<li><a href="#">高德</a></li>
+					<li class="space"></li>
+					<li><a href="#">UC</a></li>
+					<li class="space"></li>
+					<li><a href="#">友盟</a></li>
+				</ul>
+				<ul>
+					<li><a href="#">虾米</a></li>
+					<li class="space"></li>
+					<li><a href="#">大麦网</a></li>
+					<li class="space"></li>
+					<li><a href="#">钉钉</a></li>
+					<li class="space"></li>
+					<li><a href="#">支付宝</a></li>
+					<li class="space"></li>
+					<li><a href="#">优酷</a></li>
+					<li class="space"></li>
+					<li><a href="#">土豆</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里健康</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里影业</a></li>
+					<li class="space"></li>
+					<li><a href="#">阿里体育</a></li>
+					<li class="space"></li>
+					<li><a href="#">网商银行</a></li>
+				</ul>
+			</div>
+			<div class="bottom-footer-center">
+				<ul>
+					<li><a href="#">关于淘宝</a></li>
+					<li><a href="#">合作伙伴</a></li>
+					<li><a href="#">营销中心</a></li>
+					<li><a href="#">廉政举报</a></li>
+					<li><a href="#">联系客服</a></li>
+					<li><a href="#">开放平台</a></li>
+					<li><a href="#">诚征英才</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">网站地图</a></li>
+					<li><a href="#">法律声明及隐私权政策</a></li>
+					<li><a href="#">知识产权</a></li>
+					<li class="space"></li>
+					<li>© 2003-现在 Taobao.com 版权所有</li>
+				</ul>
+				<ul>
+					<li><a href="#">
+
+						网络文化经营许可证：浙网文[2016]0268-027号
+					</a></li>
+					<li class="space1"></li>
+					<li><a href="#">增值电信业务经营许可证：浙B2-20080224</a></li>
+					<li class="space1"></li>
+					<li>互联网违法和不良信息举报电话：0571-81683755 blxxjb@alibaba-inc.com</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#">
+						<span></span>
+						<i>浙公网安备 33010002000078号</i>
+						</a></li>
+					<li class="space2"></li>
+					<li>（浙）网械平台备字[2018]第00004号</li>
+					<li class="space2"></li>
+					<li><a href="#">出版物网络交易平台服务经营备案证：新出发浙备字第002号</a></li>
+				</ul>
+			</div>
+			<div class="bottom-footer-bf">
+				<ul>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+					<li><a href="#"><span></span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
